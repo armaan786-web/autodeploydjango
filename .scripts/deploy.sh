@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+DEPLOY_DIR="/home/ubuntu/autodeploydjango"
 echo "Deployment started ..."
 
 # Pull the latest version of the app
