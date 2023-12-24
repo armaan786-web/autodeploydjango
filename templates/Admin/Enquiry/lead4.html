@@ -1,0 +1,254 @@
+{% extends "Admin/Base/base.html" %}
+{% load static %}
+{% load custom_filters %}
+{% block main-content %}
+<div class="form-container">
+  <div class="custom-container">
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M18.0991 9.91073L16.4304 8.24404L10.5899 2.41065C10.4334 2.25442 10.2213 2.16666 10 2.16666C9.77878 2.16666 9.5666 2.25442 9.41013 2.41065L3.56962 8.24404L1.9009 9.91073C1.74892 10.0679 1.66482 10.2784 1.66672 10.4969C1.66862 10.7154 1.75637 10.9244 1.91107 11.0789C2.06576 11.2334 2.27503 11.3211 2.4938 11.323C2.71256 11.3249 2.92332 11.2409 3.08068 11.0891L3.32515 10.8449V17.1666C3.32515 17.6087 3.50096 18.0326 3.81391 18.3452C4.12685 18.6577 4.5513 18.8333 4.99387 18.8333H7.49695C7.71823 18.8333 7.93045 18.7455 8.08693 18.5892C8.2434 18.433 8.3313 18.221 8.3313 18V14.6666C8.3313 14.4456 8.41921 14.2336 8.57568 14.0774C8.73215 13.9211 8.94438 13.8333 9.16566 13.8333H10.8344C11.0557 13.8333 11.2679 13.9211 11.4244 14.0774C11.5808 14.2336 11.6687 14.4456 11.6687 14.6666V18C11.6687 18.221 11.7566 18.433 11.9131 18.5892C12.0696 18.7455 12.2818 18.8333 12.5031 18.8333H15.0062C15.4487 18.8333 15.8732 18.6577 16.1861 18.3452C16.4991 18.0326 16.6749 17.6087 16.6749 17.1666V10.8449L16.9194 11.0891C17.0767 11.2409 17.2875 11.3249 17.5062 11.323C17.725 11.3211 17.9343 11.2334 18.089 11.0789C18.2437 10.9244 18.3314 10.7154 18.3333 10.4969C18.3352 10.2784 18.2511 10.0679 18.0991 9.91073Z"
+            fill="#374151" />
+        </svg>
+      </div>
+
+    </div>
+    <div class="text-container">
+      <a href="http://" style="text-decoration: none;">
+        <div class="text">Dashboard</div>
+      </a>
+    </div>
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+            fill="#9CA3AF" />
+        </svg>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text">Add Lead</div>
+    </div>
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+            fill="#9CA3AF" />
+        </svg>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text" style="color: #6B7280;">Personal Info</div>
+    </div>
+  </div>
+  <div class="customs-container">
+    <div class="custom-box">
+      <div class="custom-text">Add Lead</div>
+    </div>
+  </div>
+  {% include "Admin/Base/messages.html" %}
+
+  <div class="main-container">
+    <div class="forms-container">
+      <div class="info-mainsection">
+        <div class="info-section">
+          <div class="icons-container">
+            <div class="check-icons">
+              <div class="inner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z"
+                    fill="#03543F" />
+                </svg>
+              </div>
+            </div>
+            <div class="info-text">
+              <div class="title">Personal Info</div>
+            </div>
+          </div>
+          <div class="divider">
+            <img src="{% static "style/Styling/Bootstrap/img/Line.svg" %}" alt="">
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="icons-container">
+            <div class="check-icons">
+              <div class="inner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z"
+                    fill="#03543F" />
+                </svg>
+              </div>
+            </div>
+            <div class="info-text">
+              <div class="title">Other Details</div>
+            </div>
+          </div>
+          <div class="divider">
+            <img src="{% static "style/Styling/Bootstrap/img/Line.svg" %}" alt="">
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="icons-container">
+            <div class="check-icons">
+              <div class="inner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z"
+                    fill="#03543F" />
+                </svg>
+              </div>
+            </div>
+            <div class="info-text">
+              <div class="title">Product Selection</div>
+            </div>
+          </div>
+          <div class="divider">
+            <img src="{% static "style/Styling/Bootstrap/img/Line.svg" %}" alt="">
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="icons-container">
+            <div class="check-icons">
+              <div class="inner-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z"
+                    fill="#03543F" />
+                </svg>
+              </div>
+            </div>
+            <div class="info-text">
+              <div class="title">Add Documents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inputforms-container">
+      {% for document_category, documents in grouped_documents.items %}
+      <div class="accordion" id="testingg-{{ document_category.id }}">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="custom-acc-button accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#demo-{{ document_category.id }}" aria-expanded="true" aria-controls="collapseOne">
+              List Of {{ document_category }}
+              <span>{{ documents|length }} Documents Needed</span>
+            </button>
+
+          </h2>
+          <div id="demo-{{ document_category.id }}" class="accordion-collapse collapse show" data-bs-parent="#testingg-{{ document_category.id }}">
+            <div class="accordion-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>S. No</th>
+                    <th>Document Name</th>
+                    <th>File Name</th>
+                    <th>Uploaded On</th>
+                    <th>Uploaded By</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for document in documents %}
+                  <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ document.document_name }}
+                      (Document Max size should be {{ document.document_size }} MB)
+                    </td>
+                    <td>
+                      {% for xyz in doc_file %}
+                      {% if xyz.document_id_id == document.id and xyz.enquiry_id == enq %}
+                      {% if xyz.document_file %}
+                      {{xyz.document_file.url|filename}}
+
+
+                      <br>
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="{{xyz.document_file.url}}" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 5C6.612 5 2 10.336 2 12C2 13.742 5.546 19 12 19C18.454 19 22 13.742 22 12C22 10.336 17.388 5 12 5ZM12 15C11.4067 15 10.8266 14.8241 10.3333 14.4944C9.83994 14.1648 9.45542 13.6962 9.22836 13.1481C9.0013 12.5999 8.94189 11.9967 9.05764 11.4147C9.1734 10.8328 9.45912 10.2982 9.87868 9.87868C10.2982 9.45912 10.8328 9.1734 11.4147 9.05764C11.9967 8.94189 12.5999 9.0013 13.1481 9.22836C13.6962 9.45542 14.1648 9.83994 14.4944 10.3333C14.8241 10.8266 15 11.4067 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15Z" fill="#1E429F"/>
+                                 </svg>
+                          </a>
+                        </div>
+                        <div class="col-md-5">
+                          <a href="{{xyz.document_file.url}}" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13.8333 10.5641V10.0641H13.3333H11.4857L11.8441 9.69659H13.3333C13.5501 9.69659 13.7607 9.78483 13.9181 9.94618C14.0758 10.108 14.1666 10.33 14.1666 10.5641V13.2992C14.1666 13.5333 14.0758 13.7553 13.9181 13.9171C13.7607 14.0784 13.5501 14.1667 13.3333 14.1667H2.66659C2.44972 14.1667 2.23909 14.0784 2.08178 13.9171C1.92404 13.7553 1.83325 13.5333 1.83325 13.2992V10.5641C1.83325 10.33 1.92404 10.108 2.08178 9.94618C2.23909 9.78483 2.44972 9.69659 2.66659 9.69659H4.15576L4.51409 10.0641H2.66659H2.16659V10.5641V13.2992V13.7992H2.66659H13.3333H13.8333V13.2992V10.5641ZM7.88636 9.67261L7.88592 9.67216L5.21992 6.9378L5.21997 6.93775L5.2138 6.93163C5.1973 6.91529 5.18346 6.89505 5.1737 6.87174C5.16393 6.84842 5.15862 6.82288 5.1584 6.79673C5.15818 6.77058 5.16306 6.74492 5.17245 6.72137C5.18184 6.69783 5.19538 6.67728 5.21166 6.66059C5.22791 6.64392 5.24653 6.63144 5.26609 6.62324C5.28561 6.61504 5.30607 6.61109 5.3264 6.61127C5.34672 6.61145 5.36715 6.61577 5.3866 6.62434C5.40607 6.63292 5.42455 6.64577 5.44058 6.66279L5.44052 6.66284L5.44659 6.66906L6.97525 8.23692L7.83325 9.11692V7.88787V2.0171C7.83325 1.96434 7.85381 1.91621 7.88651 1.88266C7.9188 1.84955 7.95986 1.83334 7.99992 1.83334C8.03998 1.83334 8.08104 1.84955 8.11332 1.88266C8.14603 1.91621 8.16659 1.96434 8.16659 2.0171V7.88787V9.11692L9.02459 8.23692L10.5499 6.6725C10.5819 6.64186 10.6216 6.62705 10.6604 6.62739C10.7 6.62775 10.7405 6.64396 10.7725 6.67671C10.8048 6.70986 10.8253 6.7573 10.8257 6.80944C10.8262 6.8605 10.8073 6.9075 10.7766 6.94123L8.11392 9.67216L8.11348 9.67261C8.0974 9.68915 8.07898 9.70157 8.05963 9.70981C8.04031 9.71803 8.02006 9.72209 7.99992 9.72209C7.97978 9.72209 7.95953 9.71803 7.94021 9.70981C7.92086 9.70157 7.90244 9.68915 7.88636 9.67261ZM11.4999 11.9316C11.4999 12.0451 11.4134 12.1154 11.3333 12.1154C11.2531 12.1154 11.1666 12.0451 11.1666 11.9316C11.1666 11.8181 11.2531 11.7479 11.3333 11.7479C11.4134 11.7479 11.4999 11.8181 11.4999 11.9316Z" fill="#071C2C" stroke="#071C2C"/>
+                                  </svg>
+                          </a>
+                        </div>
+                      </div>
+                      {% endif %}
+                      {% endif %}
+                      {% endfor %}
+                    </td>
+                    <td>
+                      {% for testing in doc_file %}
+                      {% if document.id == testing.document_id_id %}
+                      {{testing.last_updated_on}}
+
+                      {% endif %}
+                      {% endfor %}
+                    </td>
+                    <td>
+                      {% for testing in doc_file %}
+                      {% if document.id == testing.document_id_id %}
+
+                      {{testing.lastupdated_by}}
+
+                      {% endif %}
+                      {% endfor %}
+                    </td>
+
+                    <td>
+                      <button class="btn-upload" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ document.id }}" type="submit">
+                        Upload
+                      </button>
+                      {% include "Admin/Enquiry/DocumentUpload/upload_document.html" %}
+                      {% for testing in doc_file %}
+                                {% if document.id == testing.document_id_id %}
+                                <input type="text" value={{testing.id}} name="doc_file_id" hidden>
+                      <a href="{% url "docfile" testing.id %}">
+                      <button class="btn-delete" type="submit">
+                        Delete
+                      </button>
+                      </a>
+                      {% endif %}
+                                {% endfor %}
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+          <!-- Modal -->
+
+
+          <!-- Modal -->
+          
+        </div>
+
+      </div>
+      {% endfor %}
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-color" type="submit">Submit
+
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock main-content %}

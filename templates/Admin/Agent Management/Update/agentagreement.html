@@ -1,0 +1,204 @@
+{% extends "Admin/Base/base.html" %}
+{% load static %}
+{% block main-content %}
+<div class="form-container">
+<div class="custom-container">
+   <div class="icon-container">
+      <div class="icon">
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path
+               d="M18.0991 9.91073L16.4304 8.24404L10.5899 2.41065C10.4334 2.25442 10.2213 2.16666 10 2.16666C9.77878 2.16666 9.5666 2.25442 9.41013 2.41065L3.56962 8.24404L1.9009 9.91073C1.74892 10.0679 1.66482 10.2784 1.66672 10.4969C1.66862 10.7154 1.75637 10.9244 1.91107 11.0789C2.06576 11.2334 2.27503 11.3211 2.4938 11.323C2.71256 11.3249 2.92332 11.2409 3.08068 11.0891L3.32515 10.8449V17.1666C3.32515 17.6087 3.50096 18.0326 3.81391 18.3452C4.12685 18.6577 4.5513 18.8333 4.99387 18.8333H7.49695C7.71823 18.8333 7.93045 18.7455 8.08693 18.5892C8.2434 18.433 8.3313 18.221 8.3313 18V14.6666C8.3313 14.4456 8.41921 14.2336 8.57568 14.0774C8.73215 13.9211 8.94438 13.8333 9.16566 13.8333H10.8344C11.0557 13.8333 11.2679 13.9211 11.4244 14.0774C11.5808 14.2336 11.6687 14.4456 11.6687 14.6666V18C11.6687 18.221 11.7566 18.433 11.9131 18.5892C12.0696 18.7455 12.2818 18.8333 12.5031 18.8333H15.0062C15.4487 18.8333 15.8732 18.6577 16.1861 18.3452C16.4991 18.0326 16.6749 17.6087 16.6749 17.1666V10.8449L16.9194 11.0891C17.0767 11.2409 17.2875 11.3249 17.5062 11.323C17.725 11.3211 17.9343 11.2334 18.089 11.0789C18.2437 10.9244 18.3314 10.7154 18.3333 10.4969C18.3352 10.2784 18.2511 10.0679 18.0991 9.91073Z"
+               fill="#374151" />
+         </svg>
+      </div>
+   </div>
+   <div class="text-container">
+      <a href="http://" style="text-decoration: none">
+         <div class="text">Dashboard</div>
+      </a>
+   </div>
+   <div class="icon-container">
+      <div class="icon">
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path
+               d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+               fill="#9CA3AF" />
+         </svg>
+      </div>
+   </div>
+   <div class="text-container">
+      <div class="text">Agent</div>
+   </div>
+</div>
+<div class="customs-container">
+   <div class="custom-box">
+      <div class="custom-text">All Agents</div>
+   </div>
+</div>
+<div class="employee-main">
+   <div class="profiledetail-container">
+      <div class="profile-image">
+         <div class="image-content">
+            {% if agent.profile_pic and agent.profile_pic.url %}
+            <div class="initials"><img src="{{agent.profile_pic.url}}" alt="" style="width:100%"></div>
+            {% else %}
+            <div class="initials"><img src="{% static "style/Styling/Bootstrap/img/user.jpg" %}" alt="" style="width:100%"></div>
+            {% endif %}
+         </div>
+      </div>
+      <div class="profile-details">
+         <div class="details-column">
+            <div class="details-label">Agent Name :</div>
+            <div class="details-label">Registered on:</div>
+            <div class="details-label">Contact Info:</div>
+            <div class="details-label">Email:</div>
+         </div>
+         <div class="details-column">
+            <div class="detail-value">{{agent.users}}</div>
+            <div class="detail-value">{{agent.registeron}}</div>
+            <div class="detail-value">{{agent.contact_no}}</div>
+            <div class="detail-value">{{agent.users.email}}</div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- ///////////////////////////////////////// -->
+<div class="agentem-container">
+   <div class="custom-box">
+      <div class="agent-text3"><a  class="agent-text2" href="{% url "admin_agent_details" agent.id %}">All Details</a></div>
+   </div>
+   <div class="custom-box">
+      <div class="agent-text1">Agreements</div>
+   </div>
+   <div class="custom-box">
+      <div class="agent-text3"><a  class="agent-text3" href="{% url "admin_agent_kyc" agent.id %}">KYC Details</a></div>
+   </div>
+</div>
+<!-- ////////////////Add NEW Agreement////////////////// -->
+<form  method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+   <div class="resolvedquerycontent1">
+      <ul class="list-group">
+         <div class="list-item">
+            <!-- <li class="list-group-item agentitem">Add New Agreement </li> -->
+            <li class="list-group-item flexibilityListItem agentitem">Add New Agreement
+               <img src="Styling/Bootstrap/img/downArrow.svg" alt="">
+            </li>
+         </div>
+         <li class="list-group-item item-content">
+            <div class="inputforms-agentcontainer">
+               <div class="row formrow">
+                  <div class="col-md-6 ">
+                     <label for="exampleFormControlInput1" class="custom-form-label">Agreement Name</label>
+                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="agreement_name">
+                  </div>
+                  <div class="col-md-6 ">
+                     <label for="exampleFormControlInput1" class="custom-form-label">Add Photograph</label>
+                     <div class="file-upload">
+                        <div class="upload-info">
+                           <div class="upload-text">
+                              <span class="bold-text">Click to upload Max. File Size:
+                              30MB</span>
+                           </div>
+                           <!-- <div class="file-size"></div> -->
+                        </div>
+                        <div class="upload-button">
+                           <input type="file" id="fileInput" name="file">
+                           <label for="fileInput" class="notes-button-text">
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-color" type="submit">Save
+                  </button>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+</form>
+<!-- //////////Table////////////// -->
+<div class="resolvedquerycontent1">
+   <ul class="list-group">
+      <div class="list-item">
+      {% include "Admin/Base/messages.html" %}
+         <!-- <li class="list-group-item agentitem">All Agreements</li> -->
+         <li class="list-group-item flexibilityListItem agentitem">All Agreements
+            <img src="Styling/Bootstrap/img/downArrow.svg" alt="">
+         </li>
+      </div>
+      <li class="list-group-item item-content">
+         <div class="inputforms-agentcontainer agent2table">
+            <table class="table">
+               <thead class="thead-dark">
+                  <tr>
+                     <th scope="col">S. NO.</th>
+                     <th scope="col">Agreement name</th>
+                     <th scope="col">File name</th>
+                     <th scope="col">ACTIONS</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {% for i in agreement %}
+                  <tr>
+                     <th scope="row">{{forloop.counter}}</th>
+                     <td>{{i.agreement_name}}</td>
+                     {% if i.agreement_file %}
+                     <td>
+                        <div class="row">
+                           <div class="col-md-2">
+                              <a href="{{i.agreement_file.url}}">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 5C6.612 5 2 10.336 2 12C2 13.742 5.546 19 12 19C18.454 19 22 13.742 22 12C22 10.336 17.388 5 12 5ZM12 15C11.4067 15 10.8266 14.8241 10.3333 14.4944C9.83994 14.1648 9.45542 13.6962 9.22836 13.1481C9.0013 12.5999 8.94189 11.9967 9.05764 11.4147C9.1734 10.8328 9.45912 10.2982 9.87868 9.87868C10.2982 9.45912 10.8328 9.1734 11.4147 9.05764C11.9967 8.94189 12.5999 9.0013 13.1481 9.22836C13.6962 9.45542 14.1648 9.83994 14.4944 10.3333C14.8241 10.8266 15 11.4067 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15Z" fill="#1E429F"/>
+                                 </svg>
+                              </a>
+                           </div>
+                           <div class="col-md-2">
+                              <a href="{{i.agreement_file.url}}"download>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M13.8333 10.5641V10.0641H13.3333H11.4857L11.8441 9.69659H13.3333C13.5501 9.69659 13.7607 9.78483 13.9181 9.94618C14.0758 10.108 14.1666 10.33 14.1666 10.5641V13.2992C14.1666 13.5333 14.0758 13.7553 13.9181 13.9171C13.7607 14.0784 13.5501 14.1667 13.3333 14.1667H2.66659C2.44972 14.1667 2.23909 14.0784 2.08178 13.9171C1.92404 13.7553 1.83325 13.5333 1.83325 13.2992V10.5641C1.83325 10.33 1.92404 10.108 2.08178 9.94618C2.23909 9.78483 2.44972 9.69659 2.66659 9.69659H4.15576L4.51409 10.0641H2.66659H2.16659V10.5641V13.2992V13.7992H2.66659H13.3333H13.8333V13.2992V10.5641ZM7.88636 9.67261L7.88592 9.67216L5.21992 6.9378L5.21997 6.93775L5.2138 6.93163C5.1973 6.91529 5.18346 6.89505 5.1737 6.87174C5.16393 6.84842 5.15862 6.82288 5.1584 6.79673C5.15818 6.77058 5.16306 6.74492 5.17245 6.72137C5.18184 6.69783 5.19538 6.67728 5.21166 6.66059C5.22791 6.64392 5.24653 6.63144 5.26609 6.62324C5.28561 6.61504 5.30607 6.61109 5.3264 6.61127C5.34672 6.61145 5.36715 6.61577 5.3866 6.62434C5.40607 6.63292 5.42455 6.64577 5.44058 6.66279L5.44052 6.66284L5.44659 6.66906L6.97525 8.23692L7.83325 9.11692V7.88787V2.0171C7.83325 1.96434 7.85381 1.91621 7.88651 1.88266C7.9188 1.84955 7.95986 1.83334 7.99992 1.83334C8.03998 1.83334 8.08104 1.84955 8.11332 1.88266C8.14603 1.91621 8.16659 1.96434 8.16659 2.0171V7.88787V9.11692L9.02459 8.23692L10.5499 6.6725C10.5819 6.64186 10.6216 6.62705 10.6604 6.62739C10.7 6.62775 10.7405 6.64396 10.7725 6.67671C10.8048 6.70986 10.8253 6.7573 10.8257 6.80944C10.8262 6.8605 10.8073 6.9075 10.7766 6.94123L8.11392 9.67216L8.11348 9.67261C8.0974 9.68915 8.07898 9.70157 8.05963 9.70981C8.04031 9.71803 8.02006 9.72209 7.99992 9.72209C7.97978 9.72209 7.95953 9.71803 7.94021 9.70981C7.92086 9.70157 7.90244 9.68915 7.88636 9.67261ZM11.4999 11.9316C11.4999 12.0451 11.4134 12.1154 11.3333 12.1154C11.2531 12.1154 11.1666 12.0451 11.1666 11.9316C11.1666 11.8181 11.2531 11.7479 11.3333 11.7479C11.4134 11.7479 11.4999 11.8181 11.4999 11.9316Z" fill="#071C2C" stroke="#071C2C"/>
+                                  </svg>
+                              </a>
+                           </div>
+                     </td>
+                     {% comment %} <td class="tableagent"><a href="{{i.agreement_file.url}}" target="__blan"><img style="width:60px;" src="{{ i.agreement_file.url }}" alt="Profile Picture"></a></td> {% endcomment %}
+                     {% else %}
+                     <td>No Any File Upload</td>
+                     {% endif %}
+                     <td>
+                     <div class="agenttableicon">
+                     <a href="http://"  data-toggle="modal" data-target="#myModal-{{i.id}}">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        >
+                     <path
+                        d="M16.3033 4.3032C16.5247 4.07397 16.7895 3.89114 17.0823 3.76536C17.3751 3.63957 17.6901 3.57337 18.0087 3.5706C18.3274 3.56783 18.6434 3.62855 18.9384 3.74923C19.2333 3.8699 19.5013 4.04811 19.7266 4.27345C19.952 4.49879 20.1302 4.76676 20.2509 5.06171C20.3715 5.35666 20.4323 5.67269 20.4295 5.99136C20.4267 6.31003 20.3605 6.62496 20.2347 6.91777C20.109 7.21058 19.9261 7.47541 19.6969 7.6968L18.7453 8.6484L15.3517 5.2548L16.3033 4.3032ZM13.6549 6.9516L3.6001 17.0064V20.4H6.9937L17.0497 10.3452L13.6537 6.9516H13.6549Z"
+                        fill="#1F2A37"
+                        />
+                     </svg>
+                     </a>
+                     {% include "Admin/Agent Management/Update/agentagreement_update_modal.html" %}
+                     <a href="{% url "admin_agent_agreement_delete" i.id %}"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                     <path
+                        d="M20 6.21053H16V4.10526C16 3.54691 15.7893 3.01143 15.4142 2.61662C15.0391 2.2218 14.5304 2 14 2H10C9.46957 2 8.96086 2.2218 8.58579 2.61662C8.21071 3.01143 8 3.54691 8 4.10526V6.21053H4C3.73478 6.21053 3.48043 6.32143 3.29289 6.51884C3.10536 6.71624 3 6.98398 3 7.26316C3 7.54233 3.10536 7.81007 3.29289 8.00748C3.48043 8.20489 3.73478 8.31579 4 8.31579H5V19.8947C5 20.4531 5.21071 20.9886 5.58579 21.3834C5.96086 21.7782 6.46957 22 7 22H17C17.5304 22 18.0391 21.7782 18.4142 21.3834C18.7893 20.9886 19 20.4531 19 19.8947V8.31579H20C20.2652 8.31579 20.5196 8.20489 20.7071 8.00748C20.8946 7.81007 21 7.54233 21 7.26316C21 6.98398 20.8946 6.71624 20.7071 6.51884C20.5196 6.32143 20.2652 6.21053 20 6.21053ZM10 4.10526H14V6.21053H10V4.10526ZM11 17.7895C11 18.0686 10.8946 18.3364 10.7071 18.5338C10.5196 18.7312 10.2652 18.8421 10 18.8421C9.73478 18.8421 9.48043 18.7312 9.29289 18.5338C9.10536 18.3364 9 18.0686 9 17.7895V10.4211C9 10.1419 9.10536 9.87414 9.29289 9.67673C9.48043 9.47932 9.73478 9.36842 10 9.36842C10.2652 9.36842 10.5196 9.47932 10.7071 9.67673C10.8946 9.87414 11 10.1419 11 10.4211V17.7895ZM15 17.7895C15 18.0686 14.8946 18.3364 14.7071 18.5338C14.5196 18.7312 14.2652 18.8421 14 18.8421C13.7348 18.8421 13.4804 18.7312 13.2929 18.5338C13.1054 18.3364 13 18.0686 13 17.7895V10.4211C13 10.1419 13.1054 9.87414 13.2929 9.67673C13.4804 9.47932 13.7348 9.36842 14 9.36842C14.2652 9.36842 14.5196 9.47932 14.7071 9.67673C14.8946 9.87414 15 10.1419 15 10.4211V17.7895Z"
+                        fill="#9B1C1C" />
+                     </svg></div></a>
+                     </div>
+                     </td>
+                  </tr>
+                  {% endfor %}
+               </tbody>
+            </table>
+            </div>
+      </li>
+   </ul>
+   </div>
+</div>
+{% endblock main-content %}

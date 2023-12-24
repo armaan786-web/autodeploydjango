@@ -1,0 +1,44 @@
+{% load crispy_forms_tags %}
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <form action="" method="POST" autocomplete="off">
+            {% csrf_token %}
+        <div class="modal-content" style="width:650px;">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Add Branch</h4>
+                <button type="button" class="btn-close" data-dismiss="modal"></button>
+            </div>
+            <hr>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <div class="row formrow">
+                    <div class="col-md-6">
+                        <label for="exampleFormControlInput1" class="custom-form-label">Branch Name</label>
+                        {{form.branch_name}}
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleFormControlInput1" class="custom-form-label">Select Buisness Model</label>
+                        {{form.branch_source}}
+                    </div>
+
+                </div>
+                
+            </div>
+            <hr>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                    <button class="btn btn-color" type="submit">Save
+
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        </form>
+    </div>
+</div>

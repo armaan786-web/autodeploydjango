@@ -1,0 +1,118 @@
+{% extends "Login/base.html" %}
+{% load static %}
+{% block main-content %}
+
+<style>
+#countdown {
+    font-size: 24px;
+    font-weight:600;
+    color: #111928;
+}
+
+#countdown span {
+    font-weight: 600;
+    color: #FF5733; 
+    font-size:24px;
+}
+</style>
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+<div class="optcontainer">
+
+  <div class="otp-content">
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'error' %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{message}}
+      
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    <div class="otpvalues">
+      <div class="optheading">OTP Verification</div>
+      <div class="optcode">Enter 4-digit code sent on your phone number</div>
+    </div>
+
+
+      <div class="enter-value">
+        <input class="value1" type="text" maxlength="1" oninput="moveToNextInput(this)" placeholder="•" name="num1">
+        <input class="value1" type="text" maxlength="1" oninput="moveToNextInput(this)" placeholder="•" name="num2">
+        <input class="value1" type="text" maxlength="1" oninput="moveToNextInput(this)" placeholder="•" name="num3">
+        <input class="value1" type="text" maxlength="1" oninput="moveToNextInput(this)" placeholder="•" name="num4">
+      </div>
+
+      <div class="resendotp" id="countdown">
+        <div class="resendtext">Resend OTP</div>
+        <div class="resendno">0:30</div>
+      </div>
+
+      <a href="{% url "resend_otp" %}">
+        <div class="d-grid col-12">
+          <button class="btn btn-color" type="button" id="resendButton" style="display: none;">Resend OTP</button>
+        </div>
+      </a>
+
+
+      <div class="d-grid col-12">
+        <button class="btn btn-color" type="submit">Verify</button>
+      </div>
+
+
+  </div>
+
+  <!-- otpimg -->
+
+  <div class="otpimg">
+
+    <img src="{% static "style/Styling/Login/Images/OTP.svg" %}" alt="">
+  </div>
+
+
+</div>
+</form>
+<script>
+  function moveToNextInput(currentInput) {
+    var nextInput = currentInput.nextElementSibling;
+
+    if (nextInput !== null) {
+      nextInput.focus();
+    }
+  }
+</script>
+<script>
+			
+  var countdownTime = 30;
+
+  function startCountdown() {
+    var countdownElement = document.getElementById("countdown");
+    var resendButton = document.getElementById("resendButton");
+
+    var countdownInterval = setInterval(function () {
+      var minutes = Math.floor(countdownTime / 60);
+      var seconds = countdownTime % 60;
+
+      
+      countdownElement.innerHTML = "Resend Otp in <span>" + minutes + ":" + (seconds < 10 ? "0" : "") + seconds + "</span>";
+
+      if (countdownTime == 0) {
+        clearInterval(countdownInterval);
+        countdownElement.style.display = "none";
+        resendButton.style.display = "block";
+      } else {
+        countdownTime--;
+      }
+    }, 1000);
+  }
+
+  
+  window.onload = startCountdown;
+</script>
+
+
+
+{% endblock main-content %}

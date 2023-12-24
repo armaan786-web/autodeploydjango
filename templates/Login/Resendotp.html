@@ -1,0 +1,37 @@
+{% extends "Login/base.html" %}
+{% load static %}
+
+{% block main-content %}
+
+    <div class="optcontainer">
+       
+        <div class="otp-content">
+            <div class="otpvalues">
+                <div class="optheading">OTP Verification</div>
+                <div class="optcode">Enter 4-digit code sent on your phone number</div>
+            </div>
+
+            <div class="enter-value">
+                <div class="value1"></div>
+                <div class="value1"></div>
+                <div class="value1"></div>
+                <div class="value1"></div>
+            </div>
+
+
+
+            <div class="d-grid col-12">
+                <button class="btn btn-color" type="submit" id="navigatelead2">Resend OTP
+                    
+                </button>
+              </div>
+           
+        </div>
+
+
+        <!-- otpimg -->
+        <div class="otpimg">
+            <img src="{% static "style/Styling/Login/Images/OTP.svg" %}" alt="">
+        </div>
+    </div>
+{% endblock main-content %}

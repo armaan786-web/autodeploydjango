@@ -1,0 +1,123 @@
+{% extends "Admin/Base/base.html" %}
+{% block main-content %}
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" >
+          <div class="card-body d-md-flex card-bodys d-flex justify-content-between">
+            <div class="first-div">                 
+              <div class="Frame5 w-[151px] h-[126px] flex-col justify-start items-start inline-flex">
+                <img src="../Employee Design/Styling/Bootstrap/img/profile1.jpg" alt="" class="imgdas" />
+                <div class="Frame2 px-2 py-4 justify-center items-center gap-2.5 inline-flex">
+                  <div class="Headingsection">Total Agents</div>
+                </div>
+              </div>
+            </div>
+            <div class="second-div">                
+              <p>64</p>
+            </div>
+          </div>
+        </div>        
+        <!-- Additional div 1 -->
+        <div class="card mt-3" >
+            <div class="card-body d-md-flex card-bodys d-flex justify-content-between">
+              <div class="first-div">                 
+                <div class="Frame5 w-[151px] h-[126px] flex-col justify-start items-start inline-flex">
+                  <img src="../Employee Design/Styling/Bootstrap/img/profile1.jpg" alt="" class="imgdas" />
+                  <div class="Frame2 px-2 py-4 justify-center items-center gap-2.5 inline-flex">
+                    <div class="Headingsection">Total Employee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="second-div">                
+                <p>112</p>
+              </div>
+            </div>
+          </div>
+    </div> 
+    
+    
+
+    <!-- leads -->
+      <div class="col-md-4 leadsmedia">
+        <div class="card">            
+          <div class="card-body card-bodys2">
+            <h5 class="card-title">Leads</h5>
+            <div class="row ">
+              <div class="col-md-4  p-1">
+                  <div class="card mb-3 custom-card-width">
+                      <div class="card-body bg">
+                          <h5 class="card-title cases">18</h5>
+                          <p class="card-text textcase" >Cases Initiated</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 p-1">
+                  <div class="card mb-3 custom-card-width">
+                      <div class="card-body bg">
+                          <h5 class="card-title cases1">5</h5>
+                          <p class="card-text textcase1">Enrolled</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 p-1">
+                  <div class="card mb-3 custom-card-width">
+                      <div class="card-body bg">
+                          <h5 class="card-title cases2">10</h5>
+                          <p class="card-text textcase2">Pending</p>
+                      </div>
+                  </div>
+              </div>
+          </div>              
+            <div class="row">
+                <div class="col-md-6 p-1">
+                    <div class="card mb-3" >
+                        <div class="card-body bg3">
+                            <h5 class="card-title cases5"> 18</h5>
+                            <p class="card-text textcase3">Totel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-1">
+                    <div class="card mb-3" >
+                        <div class="card-body bg4">
+                            <h5 class="card-title cases6"> 5</h5>
+                            <p class="card-text textcase4">New</p>
+                        </div>
+                    </div>
+                </div>                   
+            </div>
+            <div class="">
+                <div class="leadss">
+                    <div class="leadstotal">ALL LEADS<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="svgg" viewBox="0 0 10 11" fill="none">
+                        <path d="M3.89463 8.41666C3.78499 8.41664 3.67781 8.38245 3.58666 8.31843C3.4955 8.25441 3.42446 8.16343 3.3825 8.05698C3.34055 7.95054 3.32957 7.83342 3.35095 7.72042C3.37234 7.60742 3.42512 7.50361 3.50264 7.42213L5.32841 5.50357L3.50264 3.58502C3.44968 3.53127 3.40744 3.46698 3.37839 3.3959C3.34933 3.32482 3.33403 3.24837 3.33339 3.17101C3.33276 3.09365 3.34678 3.01693 3.37466 2.94533C3.40254 2.87373 3.44371 2.80868 3.49577 2.75397C3.54782 2.69927 3.60973 2.65601 3.67787 2.62671C3.74601 2.59742 3.81901 2.58268 3.89263 2.58335C3.96625 2.58402 4.039 2.60009 4.10665 2.63063C4.17429 2.66116 4.23547 2.70555 4.28662 2.76119L6.50437 5.09166C6.60832 5.20092 6.66671 5.34909 6.66671 5.50357C6.66671 5.65806 6.60832 5.80623 6.50437 5.91548L4.28662 8.24595C4.18266 8.35522 4.04166 8.41663 3.89463 8.41666Z" fill="#1A56DB"/>
+                      </svg></div>                        
+                </div>
+            </div>                                
+        </div>             
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="calendar calendar-first" id="calendar_first">
+              <div class="calendar_header">
+                  <button class="switch-month switch-left"> <i class="fas fa-arrow-left"></i></button>
+                  <h2></h2>
+                  <button class="switch-month switch-right"> <i class="fas fa-arrow-right"></i></button>
+              </div>
+              <div class="calendar_weekdays"></div>
+              <div class="calendar_content"></div>
+          </div>
+          <div class="text-center" style="background-color: black; height:38px;">
+              <p>Create Appointment</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock main-content %}

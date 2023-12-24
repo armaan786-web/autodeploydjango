@@ -1,0 +1,70 @@
+{% extends "Login/base.html" %}
+{% load static %}
+
+{% block main-content %}
+
+
+<style>
+  .loginemailcontainer {
+    margin-bottom: 10px !important;
+  }
+
+  .loginemail {
+    margin-bottom: 10px !important;
+  }
+
+</style>
+
+
+<div class="logincontainer">
+  <div class="loginimg">
+    <img src="{% static "style/Styling/Login/Images/Login_img.svg" %}" alt="login" />
+  </div>
+  <div class="logincontent">
+    <div class="loginheading">Need help with your password?</div>
+    <div class="loginaccount">Enter the Mobile Number you use for crm.theskytrails.com, and we’ll help you create a new password.</div>
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="loginemailpass">
+        {% if messages %}
+        {% for message in messages %}
+        {% if message.tags == 'error' %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="row loginemailcontainer">
+          <div class="col-md-12" style="position: relative; display: inline-block;">
+            <div class="loginemail">Mobile Number</div>
+
+            <input type="text" class="form-control" required="" id="mobnumber" placeholder="Enter mobile number" name="mob_no">
+            
+          </div>
+
+        </div>
+
+        
+      </div>
+      
+
+      <div class="d-grid col-12">
+        <button class="btn btn-color" type="submit" >Send
+
+        </button>
+      </div>
+    </form>
+
+    <div class="loginpolicy">
+      <div class="policy1">By signing in, you agree to the <span>Terms of Service</span> and <span>Privacy policy
+        </span></div>
+      <div class="policy1">© 2022The Skytrails. All rights reserved</div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock main-content %}

@@ -1,0 +1,52 @@
+<div class="modal fade" id="editModal-{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="{% url "documentupdate_view" %}" method="post">
+            {% csrf_token %}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Document</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add your form or content for the modal body here -->
+                    <!-- <div class="inputforms-container"> -->
+                    <div class="row formrow">
+                        <div class="col-md-6">
+                            <label for="exampleFormControlInput1" class="custom-form-label"> Document Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                              placeholder="-----------"  value="{{i.document_name}}" name="document_name"/>
+                          </div>
+                          <input type="text" value="{{i.id}}" name="document_name_id" hidden>
+                          
+                        <div class="col-md-6 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label">Document Category</label>
+                            <select name="document_category_id" id="" class="form-control">
+                                {% for categories in documentcategory %}
+                                <option value="{{categories.id}}" {% if categories.id == i.document_category_id %}selected{% endif %}>{{categories.Document_category}}</option>
+                                {% endfor %}
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row formrow">
+                        <div class="col-md-6 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label">Document Size </label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                name="document_size" value={{i.document_size}}>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="modal-footer">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-color" type="submit">Update
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

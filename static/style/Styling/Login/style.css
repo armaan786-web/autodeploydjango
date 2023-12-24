@@ -1,0 +1,262 @@
+.logincontainer{
+    display: inline-flex;
+  padding: 5px 30px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--0, 36px);
+  background: #fff;
+  
+  }
+  
+.loginimg img{
+    height: 100%;
+    width: 100%;
+  }
+  
+.logincontent{
+    display: flex;
+  padding:  48px 56px;
+  flex-direction: column;
+  /* align-items: center; */
+  overflow: hidden;
+  gap:  15px;
+  border-radius:  16px;
+  background:  #FFF;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+  }
+  
+  .logindetals{
+    display: flex;
+  padding:  0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  }
+  
+  
+  .loginheading{
+    color:  #111928;
+  font-size: 30px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
+  }
+  
+  .loginaccount{
+    color:  #111928;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+  }
+  
+  .loginemailpass{
+    gap: 10px;
+  }
+
+  .formrow{
+margin-bottom: 10px ;
+  }
+  
+  
+  .loginemail{
+    color: #111928;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+  }
+  
+  .loginforget{
+    display: flex;
+  padding:  0px;
+  justify-content: flex-end;
+  align-items: center;
+  gap:  0px;
+  align-self: stretch;
+  color: #071C2C;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+  }
+
+  .custom-form-label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
+  
+  .loginagent{
+    display: flex;
+  width:  512px;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  }
+  
+  .loginagent{
+    display: flex;
+  width: var(--max-w-lg, 512px);
+  padding: var(--0, 0px);
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #071C2C;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; 
+  text-decoration-line: underline;
+  }
+  
+  .loginpolicy{
+    display: flex;
+  width: var(--max-w-lg, 512px);
+  padding: var(--0, 0px);
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  }
+  
+  .policy1{
+    color: var(--gray-700, #374151);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  }
+  
+  .policy1 span{
+    color: var(--gray-700, #071C2C);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  }
+  
+  
+  
+  /* //////////////////////////////otp///////////////////////////// */
+  
+  .optcontainer{
+    display: flex;
+  /* height: 1024px; */
+  height: 100vh;
+  padding-left: 50px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex: 1 0 0;
+  }
+  
+  .otpimg{
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(52, 160, 231, 0.05);
+  }
+  
+  
+  .otpvalues{
+    display: flex;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap:  16px;
+  }
+  
+  .otp-content{
+    display: flex;
+  width: 50%;
+  padding:  48px 56px;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  border-radius: 16px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+  }
+  
+  
+  .optheading{
+    color:  #111928;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 45px */
+  }
+  
+  .enter-value{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .value1{
+    display: flex;
+  width: 55px;
+  height:  55px;
+  padding:  8px 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--rounded-lg, 8px);
+  border: 1px solid #34A0E7;
+  text-align: center;
+  }
+  
+  
+  .resendotp{
+    display: flex;
+  padding: var(--0, 0px);
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  }
+  
+  .resendtext{
+    color: #111928;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
+  }
+  
+  .resendno{
+    color: var(--red-500, #F05252);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
+  }
+  
+  
+  .addnotesarcheve{
+    display: flex;
+    flex-direction: row;
+    color: var(--gray-500, #6B7280);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
+  }
+
+.btn-color{
+    background-color: #071C2C !important;
+    color: white !important;
+  }
+
+
+a{
+  text-decoration: none !important;
+}

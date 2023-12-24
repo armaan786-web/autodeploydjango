@@ -1,0 +1,125 @@
+{% extends "Admin/Base/base.html" %}
+<!-- {% load crispy_forms_tags %} -->
+{% load static %}
+{% block main-content %}
+
+<style>
+    .label-with-margin {
+        margin-bottom: 10px;
+      }
+</style>
+
+    <div class="form-container">
+        <!-- <div class="main-container"> -->
+            <div class="forms-container courierpage">
+                <div class="info-mainsection courierpage1">
+                    <div class="info-section">
+                        <div class="icons-container">
+                          <div class="check-icons">
+                            <div class="inner-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z" fill="#03543F"/>
+                                </svg>
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="title">Company Details</div>
+                          </div>
+                        </div>
+                        
+                    </div>
+                    <div class="divider">
+                        <img src="../Styling/Bootstrap/img/Line.svg" alt="">
+                    </div>
+                    <div class="info-section">
+                        <div class="icons-container">
+                          <div class="check-icons">
+                            <div class="inner-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                  <path d="M8.10361 15C7.88601 15.0009 7.6767 14.9089 7.52046 14.7437L3.58497 10.5775C3.50653 10.4939 3.44394 10.3943 3.40078 10.2844C3.35761 10.1745 3.33472 10.0563 3.3334 9.93674C3.33075 9.69522 3.41614 9.46244 3.57081 9.28961C3.72547 9.11678 3.93673 9.01806 4.15811 9.01516C4.3795 9.01226 4.59287 9.10543 4.75129 9.27416L8.10695 12.8251L15.2481 5.25881C15.4068 5.09007 15.6204 4.99701 15.8419 5.00007C16.0634 5.00314 16.2748 5.1021 16.4294 5.27517C16.5841 5.44824 16.6694 5.68125 16.6666 5.92294C16.6638 6.16463 16.5731 6.3952 16.4145 6.56393L8.68677 14.7437C8.53053 14.9089 8.32122 15.0009 8.10361 15Z" fill="#03543F"/>
+                                </svg>
+                            </div>
+                          </div>
+                          <div class="info-text">
+                            <div class="title">Other Details</div>
+                          </div>
+                        </div>
+                        
+                    </div>
+                      
+                </div>
+            </div>
+            
+            <form action="" method="POST">
+              {% csrf_token %}
+            <div class="resolvedquerycontent1">
+                <ul class="list-group">
+                    <div class="list-item">
+                        
+                        <li class="list-group-item flexibilityListItem agentitem">Receiver Details
+                          <img src="../Styling/Bootstrap/img/downArrow.svg" alt="">
+                        </li>
+                    </div>
+                    
+                    <li class="list-group-item item-content">
+                        
+                        <div class="inputforms-agentcontainer">
+                            <div class="row formrow">
+                                <div class="col-md-6 ">
+                                    <label class="custom-form-label label-with-margin">Receiver Contact Number</label>
+                                    {{receiver_form.receiver_no}}
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label class="custom-form-label label-with-margin">Receiver Address </label>
+                                    {{receiver_form.receiver_address}}
+                                </div>  
+                            </div>
+                      
+                        </div>
+                    
+                    </li>
+                   
+                  </ul>
+                  
+            </div>
+        <!-- </div> -->
+
+        <div class="resolvedquerycontent1">
+            <ul class="list-group">
+                <div class="list-item">
+                    <!-- <li class="list-group-item agentitem">Business Details</li> -->
+                    <li class="list-group-item flexibilityListItem agentitem">Sender Details
+                      <img src="../Styling/Bootstrap/img/downArrow.svg" alt="">
+                    </li>
+                </div>
+                
+                <li class="list-group-item item-content">
+                    <div class="inputforms-agentcontainer">
+                        <div class="row formrow">
+                            <div class="col-md-6 ">
+                                <label class="custom-form-label label-with-margin">Sender Contact Number</label>
+                                {{receiver_form.sender_no}}
+                            </div>
+                            <div class="col-md-6 ">
+                                <label class="custom-form-label label-with-margin">Sender Address </label>
+                                {{receiver_form.sender_address}}
+                            </div>  
+                        </div>
+                       
+                    
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-color" type="submit">Update
+                                
+                            </button>
+                          </div>
+                  
+                    </div>
+                </li>
+               
+              </ul>
+              
+        </div>
+    </form>
+    </div>
+    
+    {% endblock main-content %}

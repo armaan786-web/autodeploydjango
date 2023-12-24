@@ -1,0 +1,450 @@
+{% extends "Admin/Base/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block main-content %}
+
+
+<div class="courier-container">
+
+
+    <div class="custom-container">
+        <div class="icon-container">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path
+                        d="M18.0991 9.91073L16.4304 8.24404L10.5899 2.41065C10.4334 2.25442 10.2213 2.16666 10 2.16666C9.77878 2.16666 9.5666 2.25442 9.41013 2.41065L3.56962 8.24404L1.9009 9.91073C1.74892 10.0679 1.66482 10.2784 1.66672 10.4969C1.66862 10.7154 1.75637 10.9244 1.91107 11.0789C2.06576 11.2334 2.27503 11.3211 2.4938 11.323C2.71256 11.3249 2.92332 11.2409 3.08068 11.0891L3.32515 10.8449V17.1666C3.32515 17.6087 3.50096 18.0326 3.81391 18.3452C4.12685 18.6577 4.5513 18.8333 4.99387 18.8333H7.49695C7.71823 18.8333 7.93045 18.7455 8.08693 18.5892C8.2434 18.433 8.3313 18.221 8.3313 18V14.6666C8.3313 14.4456 8.41921 14.2336 8.57568 14.0774C8.73215 13.9211 8.94438 13.8333 9.16566 13.8333H10.8344C11.0557 13.8333 11.2679 13.9211 11.4244 14.0774C11.5808 14.2336 11.6687 14.4456 11.6687 14.6666V18C11.6687 18.221 11.7566 18.433 11.9131 18.5892C12.0696 18.7455 12.2818 18.8333 12.5031 18.8333H15.0062C15.4487 18.8333 15.8732 18.6577 16.1861 18.3452C16.4991 18.0326 16.6749 17.6087 16.6749 17.1666V10.8449L16.9194 11.0891C17.0767 11.2409 17.2875 11.3249 17.5062 11.323C17.725 11.3211 17.9343 11.2334 18.089 11.0789C18.2437 10.9244 18.3314 10.7154 18.3333 10.4969C18.3352 10.2784 18.2511 10.0679 18.0991 9.91073Z"
+                        fill="#374151" />
+                </svg>
+            </div>
+        </div>
+        <div class="text-container">
+            <a href="http://" style="text-decoration: none">
+                <div class="text">Dashboard</div>
+            </a>
+        </div>
+        <div class="icon-container">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path
+                        d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+                        fill="#9CA3AF" />
+                </svg>
+            </div>
+        </div>
+        <div class="text-container">
+            <div class="text">Agent Management</div>
+        </div>
+        <div class="icon-container">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path
+                        d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+                        fill="#9CA3AF" />
+                </svg>
+            </div>
+        </div>
+        <div class="text-container">
+            <div class="text">Add Agent</div>
+        </div>
+
+    </div>
+
+    <!-- ////////////////  div content ////////////////////// -->
+    <div class="appointment-container">
+        <div class="custom-box">
+            <div class="custom-text">Add Agent</div>
+        </div>
+
+    </div>
+    <div class="resolvedquerycontent1">
+        <ul class="list-group" style="border: 1px solid #E5E7EB;">
+            <div class="list-item">
+                <li class="list-group-item flexibilityListItem agentitem">General Information
+
+                </li>
+
+            </div>
+
+            {% include "Admin/Base/messages.html" %}
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="inputforms-container">
+                    <div class="row formrow">
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">First Name</label>
+                            <input type="text" name="firstname" id="firstname" class="form-control border-left-0"
+                                placeholder="First Name">
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Last Name</label>
+                            <input type="text" name="lastname" id="lastname" class="form-control border-left-0"
+                                placeholder="Last Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Email Address</label>
+                            <input type="email" name="email" id="email" class="form-control border-left-0"
+                                placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="row formrow">
+
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Contact Number </label>
+                            <input type="text" name="contact" id="contact" class="form-control border-left-0"
+                                placeholder="Contact No">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="custom-form-label label-with-margin">Type</label>
+                                <select class="form-control" name="type" id="type">
+                                    <option value="Outsourcing Partner">Outsourcing Partner
+                                    </option>
+                                    <option value="Agent">Agent</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Password</label>
+                            <input type="password" name="password" id="password" class="form-control border-left-0"
+                                placeholder="Choose Password">
+                        </div>
+                    </div>
+
+                    <div class="row formrow">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="custom-form-label label-with-margin">Country</label>
+                                <select class="form-control" name="country" id="country">
+
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Antartica">Antarctica</option>
+                                    <option value="Antigua and Barbuda">Antigua and Barbuda
+                                    </option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Aruba">Aruba</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Belarus">Belarus</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Belize">Belize</option>
+                                    <option value="Benin">Benin</option>
+                                    <option value="Bermuda">Bermuda</option>
+                                    <option value="Bhutan">Bhutan</option>
+                                    <option value="Bolivia">Bolivia</option>
+                                    <option value="Bosnia and Herzegowina">Bosnia and
+                                        Herzegowina</option>
+                                    <option value="Botswana">Botswana</option>
+                                    <option value="Bouvet Island">Bouvet Island</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="British Indian Ocean Territory">British
+                                        Indian Ocean Territory</option>
+                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                    <option value="Bulgaria">Bulgaria</option>
+                                    <option value="Burkina Faso">Burkina Faso</option>
+                                    <option value="Burundi">Burundi</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                    <option value="Cayman Islands">Cayman Islands</option>
+                                    <option value="Central African Republic">Central African
+                                        Republic</option>
+                                    <option value="Chad">Chad</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="China">China</option>
+                                    <option value="Christmas Island">Christmas Island</option>
+                                    <option value="Cocos Islands">Cocos (Keeling) Islands
+                                    </option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Comoros">Comoros</option>
+                                    <option value="Congo">Congo</option>
+                                    <option value="Congo">Congo, the Democratic Republic of the
+                                    </option>
+                                    <option value="Cook Islands">Cook Islands</option>
+                                    <option value="Costa Rica">Costa Rica</option>
+                                    <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+                                    <option value="Croatia">Croatia (Hrvatska)</option>
+                                    <option value="Cuba">Cuba</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Djibouti">Djibouti</option>
+                                    <option value="Dominica">Dominica</option>
+                                    <option value="Dominican Republic">Dominican Republic
+                                    </option>
+                                    <option value="East Timor">East Timor</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="El Salvador">El Salvador</option>
+                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option value="Eritrea">Eritrea</option>
+                                    <option value="Estonia">Estonia</option>
+                                    <option value="Ethiopia">Ethiopia</option>
+                                    <option value="Falkland Islands">Falkland Islands (Malvinas)
+                                    </option>
+                                    <option value="Faroe Islands">Faroe Islands</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="France Metropolitan">France, Metropolitan
+                                    </option>
+                                    <option value="French Guiana">French Guiana</option>
+                                    <option value="French Polynesia">French Polynesia</option>
+                                    <option value="French Southern Territories">French Southern
+                                        Territories</option>
+                                    <option value="Gabon">Gabon</option>
+                                    <option value="Gambia">Gambia</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Gibraltar">Gibraltar</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Greenland">Greenland</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Guadeloupe">Guadeloupe</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Guatemala">Guatemala</option>
+                                    <option value="Guinea">Guinea</option>
+                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option value="Guyana">Guyana</option>
+                                    <option value="Haiti">Haiti</option>
+                                    <option value="Heard and McDonald Islands">Heard and Mc
+                                        Donald Islands</option>
+                                    <option value="Holy See">Holy See (Vatican City State)
+                                    </option>
+                                    <option value="Honduras">Honduras</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Iran">Iran (Islamic Republic of)</option>
+                                    <option value="Iraq">Iraq</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Israel">Israel</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Jamaica">Jamaica</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="Kiribati">Kiribati</option>
+                                    <option value="Democratic People's Republic of Korea">Korea,
+                                        Democratic People's Republic of</option>
+                                    <option value="Korea">Korea, Republic of</option>
+                                    <option value="Kuwait">Kuwait</option>
+                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Lao">Lao People's Democratic Republic
+                                    </option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lebanon" selected>Lebanon</option>
+                                    <option value="Lesotho">Lesotho</option>
+                                    <option value="Liberia">Liberia</option>
+                                    <option value="Libyan Arab Jamahiriya">Libyan Arab
+                                        Jamahiriya</option>
+                                    <option value="Liechtenstein">Liechtenstein</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Macau">Macau</option>
+                                    <option value="Macedonia">Macedonia, The Former Yugoslav
+                                        Republic of</option>
+                                    <option value="Madagascar">Madagascar</option>
+                                    <option value="Malawi">Malawi</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Mali">Mali</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Martinique">Martinique</option>
+                                    <option value="Mauritania">Mauritania</option>
+                                    <option value="Mauritius">Mauritius</option>
+                                    <option value="Mayotte">Mayotte</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Micronesia">Micronesia, Federated States of
+                                    </option>
+                                    <option value="Moldova">Moldova, Republic of</option>
+                                    <option value="Monaco">Monaco</option>
+                                    <option value="Mongolia">Mongolia</option>
+                                    <option value="Montserrat">Montserrat</option>
+                                    <option value="Morocco">Morocco</option>
+                                    <option value="Mozambique">Mozambique</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Namibia">Namibia</option>
+                                    <option value="Nauru">Nauru</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="Netherlands Antilles">Netherlands Antilles
+                                    </option>
+                                    <option value="New Caledonia">New Caledonia</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    <option value="Nicaragua">Nicaragua</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="Niue">Niue</option>
+                                    <option value="Norfolk Island">Norfolk Island</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana
+                                        Islands</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Oman">Oman</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Panama">Panama</option>
+                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Pitcairn">Pitcairn</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Reunion">Reunion</option>
+                                    <option value="Romania">Romania</option>
+                                    <option value="Russia">Russian Federation</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis
+                                    </option>
+                                    <option value="Saint LUCIA">Saint LUCIA</option>
+                                    <option value="Saint Vincent">Saint Vincent and the
+                                        Grenadines</option>
+                                    <option value="Samoa">Samoa</option>
+                                    <option value="San Marino">San Marino</option>
+                                    <option value="Sao Tome and Principe">Sao Tome and Principe
+                                    </option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="Senegal">Senegal</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                    <option value="Sierra">Sierra Leone</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Slovakia">Slovakia (Slovak Republic)</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Solomon Islands">Solomon Islands</option>
+                                    <option value="Somalia">Somalia</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="South Georgia">South Georgia and the South
+                                        Sandwich Islands</option>
+                                    <option value="Span">Spain</option>
+                                    <option value="SriLanka">Sri Lanka</option>
+                                    <option value="St. Helena">St. Helena</option>
+                                    <option value="St. Pierre and Miguelon">St. Pierre and
+                                        Miquelon</option>
+                                    <option value="Sudan">Sudan</option>
+                                    <option value="Suriname">Suriname</option>
+                                    <option value="Svalbard">Svalbard and Jan Mayen Islands
+                                    </option>
+                                    <option value="Swaziland">Swaziland</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="Syria">Syrian Arab Republic</option>
+                                    <option value="Taiwan">Taiwan, Province of China</option>
+                                    <option value="Tajikistan">Tajikistan</option>
+                                    <option value="Tanzania">Tanzania, United Republic of
+                                    </option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Togo">Togo</option>
+                                    <option value="Tokelau">Tokelau</option>
+                                    <option value="Tonga">Tonga</option>
+                                    <option value="Trinidad and Tobago">Trinidad and Tobago
+                                    </option>
+                                    <option value="Tunisia">Tunisia</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Turkmenistan">Turkmenistan</option>
+                                    <option value="Turks and Caicos">Turks and Caicos Islands
+                                    </option>
+                                    <option value="Tuvalu">Tuvalu</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="United Arab Emirates">United Arab Emirates
+                                    </option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United States Minor Outlying Islands">United
+                                        States Minor Outlying Islands</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Vanuatu">Vanuatu</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Vietnam">Viet Nam</option>
+                                    <option value="Virgin Islands (British)">Virgin Islands
+                                        (British)</option>
+                                    <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)
+                                    </option>
+                                    <option value="Wallis and Futana Islands">Wallis and Futuna
+                                        Islands</option>
+                                    <option value="Western Sahara">Western Sahara</option>
+                                    <option value="Yemen">Yemen</option>
+                                    <option value="Serbia">Serbia</option>
+                                    <option value="Zambia">Zambia</option>
+                                    <option value="Zimbabwe">Zimbabwe</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">State</label>
+                            <input type="text" name="state" id="state" class="form-control border-left-0"
+                                placeholder="State Name">
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">City </label>
+                            <input type="text" name="city" id="city" class="form-control border-left-0"
+                                placeholder="City Name">
+                        </div>
+                    </div>
+
+                    <div class="row formrow">
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Enter Address"
+                                class="form-control border-left-0">
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Zipcode</label>
+                            <input type="text" name="zipcode" id="zipcode" class="form-control border-left-0"
+                                placeholder="Zip Code">
+                        </div>
+
+                    </div>
+
+                    <div class="row formrow">
+                        <label for="exampleFormControlInput1" class="custom-form-label label-with-margin">Upload Image</label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="image" id="image">
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        </div>
+                    </div>
+
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-color" type="submit">Save
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"
+                                fill="none">
+                                <path
+                                    d="M17.4184 10.9451C17.4996 10.7324 17.5208 10.4984 17.4794 10.2726C17.438 10.0468 17.3359 9.83941 17.1859 9.67668L12.8999 5.02192C12.8011 4.91077 12.6829 4.82212 12.5521 4.76113C12.4214 4.70015 12.2808 4.66804 12.1385 4.6667C11.9963 4.66536 11.8552 4.6948 11.7235 4.75331C11.5918 4.81182 11.4722 4.89823 11.3716 5.00749C11.271 5.11676 11.1914 5.24668 11.1375 5.3897C11.0836 5.53271 11.0565 5.68594 11.0578 5.84046C11.059 5.99497 11.0886 6.14767 11.1447 6.28965C11.2009 6.43162 11.2825 6.56003 11.3848 6.66738L13.8429 9.33688H3.5715C3.28732 9.33688 3.01478 9.45948 2.81383 9.67772C2.61289 9.89595 2.5 10.1919 2.5 10.5006C2.5 10.8092 2.61289 11.1052 2.81383 11.3234C3.01478 11.5417 3.28732 11.6643 3.5715 11.6643H13.8429L11.3859 14.3326C11.2836 14.44 11.202 14.5684 11.1458 14.7103C11.0896 14.8523 11.0601 15.005 11.0588 15.1595C11.0576 15.314 11.0847 15.4673 11.1386 15.6103C11.1925 15.7533 11.272 15.8832 11.3726 15.9925C11.4732 16.1017 11.5929 16.1882 11.7246 16.2467C11.8562 16.3052 11.9973 16.3346 12.1396 16.3333C12.2819 16.3319 12.4225 16.2998 12.5532 16.2388C12.6839 16.1779 12.8022 16.0892 12.901 15.9781L17.187 11.3233C17.2863 11.215 17.3649 11.0865 17.4184 10.9451Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </ul>
+
+    </div>
+</div>
+
+{% endblock main-content %}

@@ -1,0 +1,138 @@
+{% extends "Employee/Base/base.html" %}
+{% load static %}
+{% block main-content %}
+<div class="form-container">
+  <div class="customs-container">
+    <div class="custom-box">
+      <div class="custom-text">Profile</div>
+    </div>
+  </div>
+
+  <!-- //////////////////////////content////////////////////////////// -->
+
+  <div class="profile-container">
+    <div class="profile-content">
+      <div class="imgcontent-profile">
+        <div class="img-user">
+          <img src="{% static "style/Styling/Bootstrap/img/Avatar.png" %}" alt="" />
+        </div>
+        <div class="diff-value">
+          <div class="tech-leads">
+            <div class="tech-value">18</div>
+            <div class="tech-name">Leads</div>
+          </div>
+          <div class="agents-assign">
+            <div class="agent-value">18</div>
+            <div class="agent-name">Agents Assigned</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-detail">
+        <div class="detail-name">
+          <div class="profile-name">Name :</div>
+          <div class="profile-name">Email :</div>
+          <div class="profile-name">User Type :</div>
+          <div class="profile-name">Contact No. :</div>
+          <div class="profile-name">Department :</div>
+        </div>
+        <div class="detail-values">
+          <div class="detail-valuename">Aruni Rana</div>
+          <div class="detail-valuename">arunirana16@gmail.com</div>
+          <div class="detail-valuename">Employee</div>
+          <div class="detail-valuename">+91 4253678900</div>
+          <div class="detail-valuename">Pre Sales/ Assessment </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="profile-edit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M16.3032 4.30319C16.5246 4.07396 16.7894 3.89113 17.0822 3.76534C17.375 3.63956 17.6899 3.57336 18.0086 3.57059C18.3273 3.56782 18.6433 3.62854 18.9383 3.74922C19.2332 3.86989 19.5012 4.0481 19.7265 4.27344C19.9519 4.49878 20.1301 4.76675 20.2507 5.0617C20.3714 5.35665 20.4321 5.67268 20.4294 5.99135C20.4266 6.31002 20.3604 6.62495 20.2346 6.91776C20.1088 7.21057 19.926 7.47539 19.6968 7.69679L18.7452 8.64839L15.3516 5.25479L16.3032 4.30319ZM13.6548 6.95159L3.59998 17.0064V20.4H6.99358L17.0496 10.3452L13.6536 6.95159H13.6548Z"
+              fill="#111928"
+            />
+          </svg>
+        </div> -->
+    <div class="profile-edit">
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M16.3032 4.30319C16.5246 4.07396 16.7894 3.89113 17.0822 3.76534C17.375 3.63956 17.6899 3.57336 18.0086 3.57059C18.3273 3.56782 18.6433 3.62854 18.9383 3.74922C19.2332 3.86989 19.5012 4.0481 19.7265 4.27344C19.9519 4.49878 20.1301 4.76675 20.2507 5.0617C20.3714 5.35665 20.4321 5.67268 20.4294 5.99135C20.4266 6.31002 20.3604 6.62495 20.2346 6.91776C20.1088 7.21057 19.926 7.47539 19.6968 7.69679L18.7452 8.64839L15.3516 5.25479L16.3032 4.30319ZM13.6548 6.95159L3.59998 17.0064V20.4H6.99358L17.0496 10.3452L13.6536 6.95159H13.6548Z"
+            fill="#111928" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalLabel" class="edit-profile">Edit Profile</h5> -->
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <!-- <span aria-hidden="true">&times;</span> -->
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="resolvedquerycontent1">
+              <ul class="list-group">
+                <div class="list-item">
+                  <li class="list-group-item edit-profile">Edit Profile</li>
+
+                </div>
+
+                <li class="list-group-item item-content">
+                  <div class="inputforms-appointment">
+                    <div class="row formrow">
+                      <div class="col-md-6 ">
+                        <label for="exampleFormControlInput1" class="custom-form-label">First Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Abcde">
+                      </div>
+                      <div class="col-md-6 ">
+                        <label for="exampleFormControlInput1" class="custom-form-label">Last Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Xyzde">
+                      </div>
+                    </div>
+                    <div class="row formrow">
+                      <div class="col-md-6 ">
+                        <label for="exampleFormControlInput1" class="custom-form-label">Contact Number</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                          placeholder="+91 3132456789">
+                      </div>
+                      <div class="col-md-6 ">
+                        <label for="exampleFormControlInput1" class="custom-form-label">Email </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                          placeholder="aruni@gmail.com">
+                      </div>
+                    </div>
+
+
+
+
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-color" type="submit">Save
+
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock main-content %}

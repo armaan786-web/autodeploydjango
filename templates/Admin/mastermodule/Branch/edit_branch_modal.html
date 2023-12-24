@@ -1,0 +1,46 @@
+<div class="modal fade" id="editcurrencymyModal-{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="{% url "branchupdate_view" %}" method="POST">
+            {% csrf_token %}
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Branch</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <hr>
+        <div class="modal-body">
+            <div class="row formrow">
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="custom-form-label">Branch Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="branch_name" value={{i.branch_name}}>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="branch_name_id" value={{i.id}} hidden>
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="custom-form-label">Select Buisness Model</label>
+                    <select name="branch_source" id="" class="form-control">
+                        {% comment %} <option value="{{i.id}}" {% if i.id == i.branch_source_id %}selected{% endif %}>{{i.branch_source}}</option> {% endcomment %}
+                        
+                        <option value="COCO" {% if i.branch_source == "COCO" %}selected{% endif %}>Company Owned Company Operated</option>
+                        <option value="COFO" {% if i.branch_source == "COFO" %}selected{% endif %}>Company Owned Franchise Operated</option>
+                        <option value="FOCO" {% if i.branch_source == "FOCO" %}selected{% endif %}>Franchise Owned Company Operated</option>
+                        <option value="FOFO" {% if i.branch_source == "FOFO" %}selected{% endif %}>Franchise Owned Franchise Operated</option>
+                        
+                      </select>
+                </div>
+                
+            </div>
+            
+        </div>
+          <hr>
+        <div class="modal-footer">
+            <div class="modal-footer">
+                <div class="d-grid  d-md-flex justify-content-md-end">
+                  <button class="btn btn-color" type="submit">Update</button>
+                </div>
+              </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>

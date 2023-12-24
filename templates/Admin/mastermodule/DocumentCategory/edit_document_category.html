@@ -1,0 +1,35 @@
+<div class="modal fade" id="editcurrencymyModal-{{i.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="{% url "documentcategoryupdate_view" %}" method="POST" >
+            {% csrf_token %}
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Document Category</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <hr>
+        <div class="modal-body">
+            <div class="row formrow">
+              <div class="col-md-12">
+                <label for="exampleFormControlInput1" class="custom-form-label">Document Category Name
+                </label>
+                <input type="text" value="{{i.id}}" name="document_category_id" hidden>
+         
+                <input type="text" value="{{i.Document_category}}" name="document_category_name" class="form-control">
+              </div>
+              
+            </div>
+          </div>
+          <hr>
+        <div class="modal-footer">
+            <div class="modal-footer">
+                <div class="d-grid  d-md-flex justify-content-md-end">
+                  <button class="btn btn-color" type="submit">Update</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>

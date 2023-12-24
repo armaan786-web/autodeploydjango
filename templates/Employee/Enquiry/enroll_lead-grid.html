@@ -1,0 +1,315 @@
+{% extends "Employee/Base/base.html" %}
+{% block main-content %}
+
+<div class="form-container">
+  <div class="custom-container">
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M18.0991 9.91073L16.4304 8.24404L10.5899 2.41065C10.4334 2.25442 10.2213 2.16666 10 2.16666C9.77878 2.16666 9.5666 2.25442 9.41013 2.41065L3.56962 8.24404L1.9009 9.91073C1.74892 10.0679 1.66482 10.2784 1.66672 10.4969C1.66862 10.7154 1.75637 10.9244 1.91107 11.0789C2.06576 11.2334 2.27503 11.3211 2.4938 11.323C2.71256 11.3249 2.92332 11.2409 3.08068 11.0891L3.32515 10.8449V17.1666C3.32515 17.6087 3.50096 18.0326 3.81391 18.3452C4.12685 18.6577 4.5513 18.8333 4.99387 18.8333H7.49695C7.71823 18.8333 7.93045 18.7455 8.08693 18.5892C8.2434 18.433 8.3313 18.221 8.3313 18V14.6666C8.3313 14.4456 8.41921 14.2336 8.57568 14.0774C8.73215 13.9211 8.94438 13.8333 9.16566 13.8333H10.8344C11.0557 13.8333 11.2679 13.9211 11.4244 14.0774C11.5808 14.2336 11.6687 14.4456 11.6687 14.6666V18C11.6687 18.221 11.7566 18.433 11.9131 18.5892C12.0696 18.7455 12.2818 18.8333 12.5031 18.8333H15.0062C15.4487 18.8333 15.8732 18.6577 16.1861 18.3452C16.4991 18.0326 16.6749 17.6087 16.6749 17.1666V10.8449L16.9194 11.0891C17.0767 11.2409 17.2875 11.3249 17.5062 11.323C17.725 11.3211 17.9343 11.2334 18.089 11.0789C18.2437 10.9244 18.3314 10.7154 18.3333 10.4969C18.3352 10.2784 18.2511 10.0679 18.0991 9.91073Z"
+            fill="#374151" />
+        </svg>
+      </div>
+
+    </div>
+    <div class="text-container">
+      <a href="http://" style="text-decoration: none;">
+        <div class="text">Dashboard</div>
+      </a>
+    </div>
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+            fill="#9CA3AF" />
+        </svg>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text">Leads</div>
+    </div>
+    <div class="icon-container">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path
+            d="M7.78916 16.3333C7.56988 16.3333 7.35554 16.2649 7.17323 16.1369C6.99092 16.0088 6.84882 15.8269 6.76491 15.614C6.68101 15.4011 6.65905 15.1668 6.70181 14.9408C6.74458 14.7148 6.85015 14.5072 7.00519 14.3443L10.6567 10.5071L7.00519 6.67003C6.89928 6.56254 6.8148 6.43396 6.75668 6.2918C6.69857 6.14964 6.66798 5.99674 6.6667 5.84202C6.66542 5.6873 6.69348 5.53386 6.74923 5.39066C6.80499 5.24745 6.88732 5.11735 6.99144 5.00795C7.09556 4.89854 7.21936 4.81202 7.35564 4.75343C7.49192 4.69484 7.63794 4.66536 7.78517 4.6667C7.93241 4.66804 8.07792 4.70019 8.2132 4.76126C8.34849 4.82233 8.47085 4.9111 8.57314 5.02239L13.0087 9.68333C13.2165 9.90184 13.3333 10.1982 13.3333 10.5071C13.3333 10.8161 13.2165 11.1125 13.0087 11.331L8.57314 15.9919C8.36523 16.2104 8.08323 16.3333 7.78916 16.3333Z"
+            fill="#9CA3AF" />
+        </svg>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text" style="color: #6B7280;">View all Enrolled Leads</div>
+    </div>
+  </div>
+  <div class="customs-container">
+    <div class="custom-box">
+      <div class="custom-text">View All Enrolled Leads</div>
+    </div>
+    <div class="tabBox">
+      <div class="tabOnes">
+        <a href="{% url "employee_lead_list" %}"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none"
+          style="padding-right: 2px;">
+          <path
+            d="M6.25016 4.66659V1.41992C5.92485 1.5099 5.62806 1.68183 5.38816 1.91925L3.50283 3.80459C3.26588 4.04485 3.09403 4.34151 3.00349 4.66659H6.25016Z"
+            fill="#233876" />
+          <path
+            d="M12.2942 1.33325H7.58349V4.66659C7.58349 5.02021 7.44302 5.35935 7.19297 5.60939C6.94292 5.85944 6.60378 5.99992 6.25016 5.99992H2.91683V13.3333C2.91148 13.6809 3.0442 14.0165 3.28589 14.2664C3.52759 14.5164 3.85853 14.6603 4.20616 14.6666H12.2942C12.6418 14.6603 12.9727 14.5164 13.2144 14.2664C13.4561 14.0165 13.5888 13.6809 13.5835 13.3333V2.66659C13.5888 2.31894 13.4561 1.98335 13.2144 1.73341C12.9727 1.48347 12.6418 1.33956 12.2942 1.33325ZM10.2942 11.3333H6.13549C5.95868 11.3333 5.78911 11.263 5.66409 11.138C5.53907 11.013 5.46883 10.8434 5.46883 10.6666C5.46883 10.4898 5.53907 10.3202 5.66409 10.1952C5.78911 10.0702 5.95868 9.99992 6.13549 9.99992H10.2942C10.471 9.99992 10.6405 10.0702 10.7656 10.1952C10.8906 10.3202 10.9608 10.4898 10.9608 10.6666C10.9608 10.8434 10.8906 11.013 10.7656 11.138C10.6405 11.263 10.471 11.3333 10.2942 11.3333ZM10.2942 8.66659H6.13549C5.95868 8.66659 5.78911 8.59635 5.66409 8.47132C5.53907 8.3463 5.46883 8.17673 5.46883 7.99992C5.46883 7.82311 5.53907 7.65354 5.66409 7.52851C5.78911 7.40349 5.95868 7.33325 6.13549 7.33325H10.2942C10.471 7.33325 10.6405 7.40349 10.7656 7.52851C10.8906 7.65354 10.9608 7.82311 10.9608 7.99992C10.9608 8.17673 10.8906 8.3463 10.7656 8.47132C10.6405 8.59635 10.471 8.66659 10.2942 8.66659Z"
+            fill="#233876" />
+        </svg>All Leads</a>
+      </div>
+      <hr>
+      <div class="tabTwos">
+       <a href="{% url "employee_enrolled_lead" %}"> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none"
+          style="padding-right: 2px;">
+          <path
+            d="M6.75 4.66659V1.41992C6.42867 1.51192 6.13067 1.67592 5.888 1.91925L4.00267 3.80459C3.76001 4.04725 3.59601 4.34525 3.50334 4.66659H6.75Z"
+            fill="#233876" />
+          <path
+            d="M12.794 1.33325H8.08334V4.66659C8.08334 5.40192 7.48534 5.99992 6.75 5.99992H3.41667V13.3333C3.41667 14.0686 3.99467 14.6666 4.706 14.6666H12.7947C13.5053 14.6666 14.0833 14.0686 14.0833 13.3333V2.66659C14.0833 1.93125 13.5053 1.33325 12.794 1.33325ZM11.2213 8.47125L8.55467 11.1379C8.42467 11.2679 8.254 11.3333 8.08334 11.3333C7.91267 11.3333 7.742 11.2679 7.612 11.1379L6.27867 9.80459C6.01801 9.54392 6.01801 9.12259 6.27867 8.86192C6.53934 8.60125 6.96067 8.60125 7.22134 8.86192L8.08334 9.72392L10.2787 7.52859C10.5393 7.26792 10.9607 7.26792 11.2213 7.52859C11.482 7.78925 11.482 8.21059 11.2213 8.47125Z"
+            fill="#233876" />
+        </svg>Enrolled Leads</a>
+      </div>
+    </div>
+    <div class="tabsBox">
+      <div class="GridtabsOne">
+       <a href="{% url "employee_enrolled_lead" %}"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          style="margin-right: 2px;">
+          <path
+            d="M2.58337 4H1.75004C1.51992 4 1.33337 4.17909 1.33337 4.4V5.2C1.33337 5.42091 1.51992 5.6 1.75004 5.6H2.58337C2.81349 5.6 3.00004 5.42091 3.00004 5.2V4.4C3.00004 4.17909 2.81349 4 2.58337 4Z"
+            fill="#111928" />
+          <path
+            d="M2.58337 7.2H1.75004C1.51992 7.2 1.33337 7.37909 1.33337 7.6V8.4C1.33337 8.62091 1.51992 8.8 1.75004 8.8H2.58337C2.81349 8.8 3.00004 8.62091 3.00004 8.4V7.6C3.00004 7.37909 2.81349 7.2 2.58337 7.2Z"
+            fill="#111928" />
+          <path
+            d="M2.58337 10.4H1.75004C1.51992 10.4 1.33337 10.5791 1.33337 10.8V11.6C1.33337 11.8209 1.51992 12 1.75004 12H2.58337C2.81349 12 3.00004 11.8209 3.00004 11.6V10.8C3.00004 10.5791 2.81349 10.4 2.58337 10.4Z"
+            fill="#111928" />
+          <path
+            d="M13.8334 5.6H5.50004C5.27903 5.6 5.06707 5.51571 4.91079 5.36569C4.75451 5.21566 4.66671 5.01217 4.66671 4.8C4.66671 4.58783 4.75451 4.38434 4.91079 4.23431C5.06707 4.08429 5.27903 4 5.50004 4H13.8334C14.0544 4 14.2664 4.08429 14.4226 4.23431C14.5789 4.38434 14.6667 4.58783 14.6667 4.8C14.6667 5.01217 14.5789 5.21566 14.4226 5.36569C14.2664 5.51571 14.0544 5.6 13.8334 5.6Z"
+            fill="#111928" />
+          <path
+            d="M13.8334 8.8H5.50004C5.27903 8.8 5.06707 8.71571 4.91079 8.56569C4.75451 8.41566 4.66671 8.21217 4.66671 8C4.66671 7.78783 4.75451 7.58434 4.91079 7.43431C5.06707 7.28429 5.27903 7.2 5.50004 7.2H13.8334C14.0544 7.2 14.2664 7.28429 14.4226 7.43431C14.5789 7.58434 14.6667 7.78783 14.6667 8C14.6667 8.21217 14.5789 8.41566 14.4226 8.56569C14.2664 8.71571 14.0544 8.8 13.8334 8.8Z"
+            fill="#111928" />
+          <path
+            d="M13.8334 12H5.50004C5.27903 12 5.06707 11.9157 4.91079 11.7657C4.75451 11.6157 4.66671 11.4122 4.66671 11.2C4.66671 10.9878 4.75451 10.7843 4.91079 10.6343C5.06707 10.4843 5.27903 10.4 5.50004 10.4H13.8334C14.0544 10.4 14.2664 10.4843 14.4226 10.6343C14.5789 10.7843 14.6667 10.9878 14.6667 11.2C14.6667 11.4122 14.5789 11.6157 14.4226 11.7657C14.2664 11.9157 14.0544 12 13.8334 12Z"
+            fill="#111928" />
+        </svg>List View</a>
+      </div>
+      <hr>
+      <div class="GridtabsTwo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          style="margin-right: 2px;">
+          <path
+            d="M6.09533 2H3.238C2.55427 2 2 2.55427 2 3.238V6.09533C2 6.77906 2.55427 7.33333 3.238 7.33333H6.09533C6.77906 7.33333 7.33333 6.77906 7.33333 6.09533V3.238C7.33333 2.55427 6.77906 2 6.09533 2Z"
+            fill="#111928" />
+          <path
+            d="M12.762 2H9.90467C9.22094 2 8.66667 2.55427 8.66667 3.238V6.09533C8.66667 6.77906 9.22094 7.33333 9.90467 7.33333H12.762C13.4457 7.33333 14 6.77906 14 6.09533V3.238C14 2.55427 13.4457 2 12.762 2Z"
+            fill="#111928" />
+          <path
+            d="M6.09533 8.66667H3.238C2.55427 8.66667 2 9.22094 2 9.90467V12.762C2 13.4457 2.55427 14 3.238 14H6.09533C6.77906 14 7.33333 13.4457 7.33333 12.762V9.90467C7.33333 9.22094 6.77906 8.66667 6.09533 8.66667Z"
+            fill="#111928" />
+          <path
+            d="M12.762 8.66667H9.90467C9.22094 8.66667 8.66667 9.22094 8.66667 9.90467V12.762C8.66667 13.4457 9.22094 14 9.90467 14H12.762C13.4457 14 14 13.4457 14 12.762V9.90467C14 9.22094 13.4457 8.66667 12.762 8.66667Z"
+            fill="#111928" />
+        </svg>Grid View
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="info-container">
+        <div class="user-info">
+          <div class="user-avatar">
+            <div class="avatar-content">PH</div>
+          </div>
+          <div class="user-details">
+            <div class="user-name">Rajeev Malhotra</div>
+            <div class="user-status">
+              <div class="status-badge">Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-details">
+
+          <div class="caseDetailsColumn">
+            <span>Case No.:</span>
+            <p>351</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Name:</span>
+            <p>Rajeev Malhotra</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Visa Country:</span>
+            <p>Malta</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Package Name:</span>
+            <p>Work Permit - ABC</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <div class="accepts-button">
+            <div class="buttons-content">
+              <div class="button-text">Accept</div>
+            </div>
+          </div>
+          <div class="rejects-button">
+            <div class="buttons-content">
+              <div class="button-text">Reject</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="info-container">
+        <div class="user-info">
+          <div class="user-avatar">
+            <div class="avatar-content">PH</div>
+          </div>
+          <div class="user-details">
+            <div class="user-name">Rajeev Malhotra</div>
+            <div class="user-status">
+              <div class="status-badge">Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-details">
+
+          <div class="caseDetailsColumn">
+            <span>Case No.:</span>
+            <p>351</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Name:</span>
+            <p>Rajeev Malhotra</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Visa Country:</span>
+            <p>Malta</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Package Name:</span>
+            <p>Work Permit - ABC</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <div class="accepts-button">
+            <div class="buttons-content">
+              <div class="button-text">Accept</div>
+            </div>
+          </div>
+          <div class="rejects-button">
+            <div class="buttons-content">
+              <div class="button-text">Reject</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="info-container">
+        <div class="user-info">
+          <div class="user-avatar">
+            <div class="avatar-content">PH</div>
+          </div>
+          <div class="user-details">
+            <div class="user-name">Rajeev Malhotra</div>
+            <div class="user-status">
+              <div class="status-badge">Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-details">
+
+          <div class="caseDetailsColumn">
+            <span>Case No.:</span>
+            <p>351</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Name:</span>
+            <p>Rajeev Malhotra</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Visa Country:</span>
+            <p>Malta</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Package Name:</span>
+            <p>Work Permit - ABC</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <div class="accepts-button">
+            <div class="buttons-content">
+              <div class="button-text">Accept</div>
+            </div>
+          </div>
+          <div class="rejects-button">
+            <div class="buttons-content">
+              <div class="button-text">Reject</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="info-container">
+        <div class="user-info">
+          <div class="user-avatar">
+            <div class="avatar-content">PH</div>
+          </div>
+          <div class="user-details">
+            <div class="user-name">Rajeev Malhotra</div>
+            <div class="user-status">
+              <div class="status-badge">Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-details">
+
+          <div class="caseDetailsColumn">
+            <span>Case No.:</span>
+            <p>351</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Name:</span>
+            <p>Rajeev Malhotra</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Visa Country:</span>
+            <p>Malta</p>
+          </div>
+          <div class="caseDetailsColumn">
+            <span>Package Name:</span>
+            <p>Work Permit - ABC</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <div class="accepts-button">
+            <div class="buttons-content">
+              <div class="button-text">Accept</div>
+            </div>
+          </div>
+          <div class="rejects-button">
+            <div class="buttons-content">
+              <div class="button-text">Reject</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock main-content %}

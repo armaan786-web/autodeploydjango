@@ -1,0 +1,59 @@
+{% load crispy_forms_tags %}
+{% load custom_filters %}
+<div class="modal" id="myModal-{{i.id}}">
+  <div class="modal-dialog">
+    <form action="{% url "update_agreement" i.id %}" method="POST" id="Agreementupdate"  autocomplete="off" enctype="multipart/form-data" >
+      {% csrf_token %}
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Update</h4>
+          <button type="button" class="btn-close" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal Body -->
+        
+          
+          <div class="modal-body">
+            <div class="row formrow">
+              <div class="col-md-12">
+                <label for="exampleFormControlInput1" class="custom-form-label">Agreement Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" value="{{i.agreement_name}}" name="agreement_name" /> 
+                
+              </div>
+            </div>
+            <div class="row formrow ">
+                <label for="exampleFormControlInput1" class="custom-form-label">Add Photograph</label>
+                <div class="file-upload">
+                  <div class="upload-info">
+                    <div class="upload-text">
+                      <span class="bold-text">Click to upload Max. File Size:
+                        30MB</span>
+
+                    </div>
+                    <!-- <div class="file-size"></div> -->
+                  </div>
+                  <div class="upload-button">
+                    <input type="file" id="fileInput" name="file">
+                    <label for="fileInput" class="notes-button-text">
+                      
+                    </label>
+                  </div>
+                </div>
+                {% if  i.agreement_file and i.agreement_file.url %}
+                <center><a href="{{i.agreement_file.url}}" target="__blank">{{i.agreement_file.url|filename}}</a></center>
+                {% else %} 
+                <center>No profile picture available</center>
+                {% endif %}
+              </div>
+          </div>
+        
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-color" type="submit">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+
+<div class="modal fade" id="staticBackdrop{{document.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <form action="{% url "uploaddocument" %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Upload Document</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <input type="text" value="{{ enq.id }}" name="enq_id" hidden>
+                        <input type="text" value="{{ document.id }}" name="document_id" hidden>
+                        <input type="text" value="{{document.document_file_id}}" hidden>
+                    <label for="formFile" class="form-label">Select File</label>
+                    <input class="form-control" type="file" id="document_file" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" name="document_file">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-color" style="width: 100%;">Confirm</button>
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>

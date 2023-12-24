@@ -1,0 +1,31 @@
+<div class="modal fade" id="addnotesModal-{{i.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form action="{% url "add_notes" %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Notes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+               aria-label="Close"></button>
+            </div>
+            <div class="notesmodal-body">
+                <div class="content">
+                <div class="header">
+                    <div class="title">Add Notes</div>
+                </div>
+                <textarea name="notes" id="" cols="50" rows="5" placeholder="Write text here ..."></textarea>
+                
+                <div >
+                    <input type="file" id="fileInput" name="file">
+                    <input type="text" value="{{i.id}}" name="enq_id" hidden>
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class=""><input class="btn btn-color" type="submit" value="Save"></div>
+            </div>
+        </div>
+        </form>
+   </div>
+</div>

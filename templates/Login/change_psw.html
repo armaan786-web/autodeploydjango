@@ -1,0 +1,89 @@
+{% extends "Login/base.html" %}
+{% load static %}
+
+{% block main-content %}
+
+
+<style>
+  .loginemailcontainer {
+    margin-bottom: 10px !important;
+  }
+
+  .loginemail {
+    margin-bottom: 10px !important;
+  }
+
+  .loginforget {
+    margin-bottom: 10px !important;
+  }
+</style>
+
+
+<div class="logincontainer">
+  <div class="loginimg">
+    <img src="{% static "style/Styling/Login/Images/Login_img.svg" %}" alt="login" />
+  </div>
+  <div class="logincontent">
+    <div class="loginheading">Hello, Welcome Back!</div>
+    <div class="loginaccount">Reset Your Password</div>
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="loginemailpass">
+        {% if messages %}
+        {% for message in messages %}
+        {% if message.tags == 'error' %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="row loginemailcontainer">
+          <div class="col-md-12" style="position: relative; display: inline-block;">
+            <div class="loginemail">New Password</div>
+
+            <input type="password" class="form-control" required="" id="exampleInputpwd_2" placeholder="Enter New pwd" name="new_psw">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none"
+              style="position: absolute; right: 20px; top: 70%; transform: translateY(-50%);">
+              <path
+                d="M1.83301 8.50016C1.83301 8.46316 1.84985 8.36109 1.92848 8.18547C2.00327 8.01844 2.11959 7.81655 2.27849 7.59069C2.596 7.13937 3.06268 6.62187 3.64189 6.13288C4.8082 5.14824 6.3642 4.3335 7.99967 4.3335C9.63514 4.3335 11.1912 5.14824 12.3575 6.13288C12.9367 6.62187 13.4033 7.13937 13.7209 7.59069C13.8798 7.81655 13.9961 8.01844 14.0709 8.18547C14.1495 8.36109 14.1663 8.46316 14.1663 8.50016C14.1663 8.65747 14.0716 9.00105 13.7986 9.4661C13.5361 9.91308 13.1387 10.4207 12.611 10.8983C11.5579 11.8512 10.0068 12.6668 7.99967 12.6668C5.99254 12.6668 4.4414 11.8512 3.38833 10.8983C2.86061 10.4207 2.46324 9.91308 2.20078 9.4661C1.92771 9.00105 1.83301 8.65747 1.83301 8.50016ZM6.61075 10.5788C7.02187 10.8535 7.50522 11.0002 7.99967 11.0002C8.66271 11.0002 9.2986 10.7368 9.76744 10.2679C10.2363 9.79909 10.4997 9.1632 10.4997 8.50016C10.4997 8.00571 10.3531 7.52236 10.0783 7.11124C9.80364 6.70011 9.4132 6.37968 8.95638 6.19046C8.49957 6.00124 7.9969 5.95174 7.51195 6.0482C7.027 6.14466 6.58154 6.38276 6.23191 6.7324C5.88228 7.08203 5.64417 7.52748 5.54771 8.01244C5.45125 8.49739 5.50076 9.00006 5.68998 9.45687C5.87919 9.91369 6.19963 10.3041 6.61075 10.5788Z"
+                fill="#071C2C" stroke="#071C2C" />
+            </svg>
+        </div>
+
+        </div>
+
+        <div class="row loginemailcontainer">
+          <div class="col-md-12" style="position: relative; display: inline-block;">
+            <div class="loginemail">Confirm Password</div>
+
+            <input type="password" class="form-control" required="" id="exampleInputpwd_3" placeholder="Re-Enter pwd" name="confirm_psw">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none"
+              style="position: absolute; right: 20px; top: 70%; transform: translateY(-50%);">
+              <path
+                d="M1.83301 8.50016C1.83301 8.46316 1.84985 8.36109 1.92848 8.18547C2.00327 8.01844 2.11959 7.81655 2.27849 7.59069C2.596 7.13937 3.06268 6.62187 3.64189 6.13288C4.8082 5.14824 6.3642 4.3335 7.99967 4.3335C9.63514 4.3335 11.1912 5.14824 12.3575 6.13288C12.9367 6.62187 13.4033 7.13937 13.7209 7.59069C13.8798 7.81655 13.9961 8.01844 14.0709 8.18547C14.1495 8.36109 14.1663 8.46316 14.1663 8.50016C14.1663 8.65747 14.0716 9.00105 13.7986 9.4661C13.5361 9.91308 13.1387 10.4207 12.611 10.8983C11.5579 11.8512 10.0068 12.6668 7.99967 12.6668C5.99254 12.6668 4.4414 11.8512 3.38833 10.8983C2.86061 10.4207 2.46324 9.91308 2.20078 9.4661C1.92771 9.00105 1.83301 8.65747 1.83301 8.50016ZM6.61075 10.5788C7.02187 10.8535 7.50522 11.0002 7.99967 11.0002C8.66271 11.0002 9.2986 10.7368 9.76744 10.2679C10.2363 9.79909 10.4997 9.1632 10.4997 8.50016C10.4997 8.00571 10.3531 7.52236 10.0783 7.11124C9.80364 6.70011 9.4132 6.37968 8.95638 6.19046C8.49957 6.00124 7.9969 5.95174 7.51195 6.0482C7.027 6.14466 6.58154 6.38276 6.23191 6.7324C5.88228 7.08203 5.64417 7.52748 5.54771 8.01244C5.45125 8.49739 5.50076 9.00006 5.68998 9.45687C5.87919 9.91369 6.19963 10.3041 6.61075 10.5788Z"
+                fill="#071C2C" stroke="#071C2C" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-grid col-12">
+        <button class="btn btn-color" type="submit" id="navigatelead2">Reset
+
+        </button>
+      </div>
+    </form>
+    <div class="loginpolicy">
+      <div class="policy1">By signing in, you agree to the <span>Terms of Service</span> and <span>Privacy policy
+        </span></div>
+      <div class="policy1">© 2022The Skytrails. All rights reserved</div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock main-content %}

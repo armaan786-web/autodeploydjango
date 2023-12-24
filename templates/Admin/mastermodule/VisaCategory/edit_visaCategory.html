@@ -1,0 +1,55 @@
+<div class="modal fade" id="editcategorymyModal-{{i.id}}" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <form action="{% url "visacategoryupdate_view" %}" method="POST">
+                        {% csrf_token %}
+                      <div class="modal-content ">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Add Visa Category</h5>
+                          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                          </button>
+                        </div>
+                        <hr>
+                        <div class="modal-body">
+                          <div class="row formrow">
+                            <div class="col-md-6">
+                              <label for="exampleFormControlInput1" class="custom-form-label">Select Country
+                              </label>
+                              <select name="visa_contry_id" id="" class="form-control">
+                                {% for contries in country %}
+                                <option value="{{contries.id}}" {% if contries.id == i.visa_country_id_id %}selected{% endif %}>{{contries.country}}</option>
+                                {% endfor %}
+                              </select>
+                              <!-- <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="Enter Country Name" /> -->
+                            </div>
+                            <div class="col-md-6">
+                              <label for="exampleFormControlInput1" class="custom-form-label">Category Name
+                              </label>
+                              <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="-----------" value="{{i.category}}" name="visa_category" />
+                            </div>
+                          </div>
+                          <div class="row formrow">
+                            <div class="col-md-6">
+                              <label for="exampleFormControlInput1" class="custom-form-label"> Sub-Category Name</label>
+                              <input type="text" class="form-control" id="exampleFormControlInput1"
+                                placeholder="-----------"  value="{{i.subcategory}}" name="visa_subcategory_id"/>
+                            </div>
+                            <input type="text" value="{{i.id}}" name="visa_category_id" hidden>
+                            
+                          </div>
+
+                        </div>
+                        <hr>
+                        <div class="modal-footer">
+                          <div class="modal-footer">
+                            <div class="d-grid  d-md-flex justify-content-md-end">
+                              <button class="btn btn-color" type="submit">Update and Save</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>

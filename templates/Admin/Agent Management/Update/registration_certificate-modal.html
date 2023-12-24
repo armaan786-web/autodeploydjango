@@ -1,0 +1,29 @@
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+         <form action="{% url "admin_agent_kyc" agent.id %}"method="Post" enctype="multipart/form-data">
+         {% csrf_token %}
+        <div class="modal-body">
+         
+          <input type="text" value="{{ agent.id }}" name="agent_id" hidden>
+           
+            <div class="mb-3">
+              {% comment %} <label for="message-text" class="col-form-label">Message:</label> {% endcomment %}
+              <input class="form-control" id="adharfront_file" type="file"
+                                  accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" name="registration_file"
+                                  multiple>
+            </div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>

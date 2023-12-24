@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css"> {% endcomment %}
+    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+   
+
+   
+    <link rel="stylesheet" href="{% static "style/Styling/Bootstrap/css/bootstrap.min.css" %}">
+      <!-- Swiper CSS -->
+      <link rel="stylesheet" href="{% static "style/Styling/Dashboard Design/css/swiper-bundle.min.css" %}">
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="{% static "style/Styling/Dashboard Design/css/style.css" %}">
+      <link rel="stylesheet" href="{% static "style/Styling/Bootstrap/style.css" %}">
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
+
+    <title>CRM TheSkytrails</title>
+      
+
+  </head>
+  <body>
+ 
+
+   {% include "Agent/Base/header.html" %}
+    {% block main-content %}{% endblock main-content %}      
+    
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+   
+  </body>
+   {% comment %} <SCript src="{% static "style/Styling/Bootstrap/js/bootstrap.bundle.min.js" %}"></SCript> {% endcomment %}
+  <!-- Swiper JS -->
+  <script src="{% static "style/Styling/Dashboard Design/js/swiper-bundle.min.js" %}"></script>
+
+  <!-- JavaScript -->
+  <script src="{% static "style/Styling/Dashboard Design/js/script.js" %}"></script>
+
+  {% comment %} ------------------------------------------------------  {% endcomment %}
+
+
+  
+{% comment %} <script src="{% static "style/Styling/Bootstrap/js/bootstrap.min.js" %}"></script> {% endcomment %}
+<!-- jQuery -->
+<!-- jQuery -->
+{% comment %} <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> {% endcomment %}
+
+<!-- DataTables CSS and JS -->
+
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Buttons CSS and JS -->
+
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+<!-- DataTables PDF support (Optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'collection',
+                    text: '<span style="display:inline-block;color:white;font-weight:500;font-size:14px;line-height:150%;">Download as <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16 style=style="margin-left: 2px;"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg> </span>',
+
+                    buttons: [
+                        {
+                            extend: 'copy',
+                            className: 'custom-button',
+                            text: '<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" style="margin-right:10px;"><path d="M13.6737 2.00001H10.082C9.81178 1.99927 9.5441 2.05573 9.29446 2.16613C9.04482 2.27653 8.81817 2.43868 8.62765 2.64318L8.14286 3.15903C8.06685 3.24496 8.01175 3.34948 7.98241 3.46342H10.9309C11.6521 3.47057 12.3412 3.78277 12.8469 4.33149C13.3527 4.88021 13.6337 5.62064 13.6284 6.39025V13.7073H13.6737C14.0313 13.7004 14.3716 13.5425 14.6202 13.2681C14.8688 12.9938 15.0053 12.6255 14.9998 12.2439V3.46342C15.0053 3.08186 14.8688 2.71353 14.6202 2.43921C14.3716 2.16488 14.0313 2.00694 13.6737 2.00001Z" fill="#6B7280"/><path d="M6.77146 8.58536V4.92682C6.77237 4.82018 6.79581 4.71514 6.84003 4.6195C6.38632 4.72053 5.97018 4.96087 5.6428 5.31097L3.70297 7.38097C3.39378 7.71304 3.17665 8.12985 3.07555 8.58536H6.77146Z" fill="#6B7280"/><path d="M10.9309 4.56098H8.03795C8.10342 4.67049 8.13969 4.79697 8.14286 4.92683V8.58537C8.14286 8.97349 7.99837 9.34571 7.74119 9.62016C7.484 9.8946 7.13518 10.0488 6.77146 10.0488H3.00013V15.1707C2.99463 15.6492 3.16717 16.1105 3.47991 16.4534C3.79265 16.7963 4.22007 16.9929 4.66843 17H10.9309C11.3793 16.9929 11.8068 16.7963 12.1197 16.4534C12.4325 16.1105 12.6052 15.6493 12.5999 15.1707V6.39024C12.6052 5.91171 12.4325 5.45045 12.1197 5.10755C11.8068 4.76466 11.3793 4.56811 10.9309 4.56098Z" fill="#6B7280"/></svg> Copy</p>'
+                        },
+                        {
+                            extend: 'csv',
+                            className: 'custom-button',
+                            text: '<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" style="margin-right:10px;"><path d="M14.25 15.5C14.25 15.5 3.75 15.086 3.75 15.5C3.75 15.914 4.0635 16.25 4.44975 16.25H13.5495C13.9365 16.25 14.25 15.914 14.25 15.5Z" fill="#6B7280"/><path d="M6.75 5.75V2.0975C6.3885 2.201 6.05325 2.3855 5.78025 2.65925L3.65925 4.78025C3.3855 5.05325 3.201 5.3885 3.0975 5.75H6.75Z" fill="#6B7280"/><path d="M15.75 7.25H14.946C14.979 7.16525 15 7.07525 15 6.97925V3.5C15 2.67275 14.3497 2 13.5502 2H8.25V5.75C8.25 6.57725 7.57725 7.25 6.75 7.25H2.25C1.836 7.25 1.5 7.586 1.5 8V14.75C1.5 15.164 1.836 15.5 2.25 15.5H3C3 16.3273 3.65025 17 4.44975 17H13.5502C14.3497 17 15 16.3273 15 15.5H15.75C16.164 15.5 16.5 15.164 16.5 14.75V8C16.5 7.586 16.164 7.25 15.75 7.25ZM4.98525 12.5H5.74875C6.16275 12.5 6.49875 12.836 6.49875 13.25C6.49875 13.664 6.16275 14 5.74875 14H4.98525C3.891 14 3 13.1097 3 12.0147V10.7353C3 9.641 3.891 8.75 4.98525 8.75H5.74875C6.16275 8.75 6.49875 9.086 6.49875 9.5C6.49875 9.914 6.16275 10.25 5.74875 10.25H4.98525C4.7175 10.25 4.5 10.4675 4.5 10.7353V12.0147C4.5 12.2825 4.7175 12.5 4.98525 12.5ZM10.887 12.9313C10.6395 13.6408 10.0635 14 9.17625 14H8.33175C7.91775 14 7.58175 13.664 7.58175 13.25C7.58175 12.836 7.91775 12.5 8.33175 12.5H9.17625C9.402 12.5 9.46575 12.4662 9.468 12.4648C9.49125 12.3785 9.50625 12.3057 9.48825 12.2765C9.45975 12.2315 9.34425 12.1595 9.17775 12.1415L8.775 12.0972C7.83075 11.9938 7.152 11.1718 7.23 10.2238C7.3065 9.3035 8.08425 8.64725 9.0015 8.62025L9.7215 8.63525C10.1355 8.64425 10.464 8.987 10.4557 9.401C10.4467 9.81575 10.0912 10.157 9.69 10.1353L8.9805 10.1202H8.979C8.84925 10.1202 8.73525 10.2177 8.72475 10.3475C8.7135 10.478 8.80725 10.5912 8.93775 10.6055L9.33975 10.6497C9.94125 10.715 10.47 11.024 10.7557 11.4755C11.022 11.8955 11.0677 12.4123 10.887 12.9313ZM14.9633 9.7325L13.7955 13.3115C13.695 13.6205 13.407 13.829 13.0823 13.829C13.08 13.829 13.077 13.829 13.074 13.829C12.7462 13.8252 12.459 13.61 12.3645 13.2965L11.2823 9.7175C11.1623 9.32075 11.3865 8.90225 11.7825 8.78225C12.18 8.66225 12.5978 8.8865 12.7178 9.2825L13.1093 10.5778L13.5367 9.2675C13.665 8.8745 14.0872 8.6585 14.4825 8.78675C14.8762 8.91575 15.0915 9.33875 14.9633 9.7325Z" fill="#6B7280"/></svg> CSV</p>'
+                        },
+                        {
+                            extend: 'excel',
+                            className: 'custom-button',
+                            text: '<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" style="margin-right:10px;"><path d="M15 4.25H3C2.60218 4.25 2.22064 4.40804 1.93934 4.68934C1.65804 4.97064 1.5 5.35218 1.5 5.75V13.25C1.5 13.6478 1.65804 14.0294 1.93934 14.3107C2.22064 14.592 2.60218 14.75 3 14.75H15C15.3978 14.75 15.7794 14.592 16.0607 14.3107C16.342 14.0294 16.5 13.6478 16.5 13.25V5.75C16.5 5.35218 16.342 4.97064 16.0607 4.68934C15.7794 4.40804 15.3978 4.25 15 4.25ZM8.25 8.75V10.25H3V8.75H8.25ZM9.75 8.75H15V10.25H9.75V8.75ZM3 11.75H8.25V13.25H3V11.75ZM9.75 13.25V11.75H15V13.25H9.75Z" fill="#6B7280"/></svg> Excel</p>'
+                        },
+                        {
+                            extend: 'pdf',
+                            className: 'custom-button',
+                            text: '<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" style="margin-right:10px;"><path d="M4.875 10.25H4.5V11H4.875C5.082 11 5.25 10.832 5.25 10.625C5.25 10.418 5.082 10.25 4.875 10.25Z" fill="#6B7280"/><path d="M6.75 5.75V2.0975C6.3885 2.201 6.05325 2.3855 5.78025 2.65925L3.65925 4.78025C3.3855 5.05325 3.201 5.3885 3.0975 5.75H6.75Z" fill="#6B7280"/><path d="M9.28125 10.25H9V12.5H9.28125C9.54 12.5 9.75 12.29 9.75 12.0312V10.7188C9.75 10.46 9.54 10.25 9.28125 10.25Z" fill="#6B7280"/><path d="M15.75 7.25H15V3.5C15 2.67275 14.3497 2 13.5502 2H8.25V5.75C8.25 6.57725 7.57725 7.25 6.75 7.25H2.25C1.836 7.25 1.5 7.586 1.5 8V14.75C1.5 15.164 1.836 15.5 2.25 15.5H3C3 16.3273 3.65025 17 4.44975 17H13.5502C14.3722 17 14.823 16.073 14.9423 15.7895C14.9813 15.6965 14.9948 15.5983 14.9948 15.5H15.75C16.164 15.5 16.5 15.164 16.5 14.75V8C16.5 7.586 16.164 7.25 15.75 7.25ZM4.875 12.5H4.5V13.25C4.5 13.664 4.164 14 3.75 14C3.336 14 3 13.664 3 13.25V9.5C3 9.086 3.336 8.75 3.75 8.75H4.875C5.9085 8.75 6.75 9.5915 6.75 10.625C6.75 11.6585 5.9085 12.5 4.875 12.5ZM11.25 12.0312C11.25 13.1165 10.3665 14 9.28125 14H8.25C7.836 14 7.5 13.664 7.5 13.25V9.5C7.5 9.086 7.836 8.75 8.25 8.75H9.28125C10.3665 8.75 11.25 9.6335 11.25 10.7188V12.0312ZM14.25 11C14.664 11 15 11.336 15 11.75C15 12.164 14.664 12.5 14.25 12.5H13.5V13.25C13.5 13.664 13.164 14 12.75 14C12.336 14 12 13.664 12 13.25V9.5C12 9.086 12.336 8.75 12.75 8.75H14.25C14.664 8.75 15 9.086 15 9.5C15 9.914 14.664 10.25 14.25 10.25H13.5V11H14.25Z" fill="#6B7280"/></svg>PDF</p>'
+                        },
+                        {
+                            extend: 'print',
+                            className: 'custom-button',
+                            text: '<p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" style="margin-right:10px;"><path d="M5.25 17H12.75C12.9489 17 13.1397 16.921 13.2803 16.7803C13.421 16.6397 13.5 16.4489 13.5 16.25V12.5H4.5V16.25C4.5 16.4489 4.57902 16.6397 4.71967 16.7803C4.86032 16.921 5.05109 17 5.25 17Z" fill="#6B7280"/><path d="M15 7.25H3C2.60218 7.25 2.22064 7.40804 1.93934 7.68934C1.65804 7.97064 1.5 8.35218 1.5 8.75V13.25C1.5 13.6478 1.65804 14.0294 1.93934 14.3107C2.22064 14.592 2.60218 14.75 3 14.75V12.5C3 12.1022 3.15804 11.7206 3.43934 11.4393C3.72064 11.158 4.10218 11 4.5 11H13.5C13.8978 11 14.2794 11.158 14.5607 11.4393C14.842 11.7206 15 12.1022 15 12.5V14.75C15.3978 14.75 15.7794 14.592 16.0607 14.3107C16.342 14.0294 16.5 13.6478 16.5 13.25V8.75C16.5 8.35218 16.342 7.97064 16.0607 7.68934C15.7794 7.40804 15.3978 7.25 15 7.25Z" fill="#6B7280"/><path d="M14.25 5.75V3.5C14.25 3.10218 14.092 2.72064 13.8107 2.43934C13.5294 2.15804 13.1478 2 12.75 2H5.25C4.85218 2 4.47064 2.15804 4.18934 2.43934C3.90804 2.72064 3.75 3.10218 3.75 3.5V5.75H14.25Z" fill="#6B7280"/></svg> Print</p>'
+                        }
+                    ]
+                }
+            ]
+        });
+    });
+</script>
+
+
+
+</html>
